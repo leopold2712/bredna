@@ -1,0 +1,27 @@
+.attachment {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+
+  p {
+    font-family: SF Pro Text;
+    font-style: normal;
+    line-height: 20px;
+  }
+
+  .name {
+    display: flex;
+    justify-content: flex-start;
+    svg {
+      fill: #919eab;
+    }
+    p {
+      margin: 0;
+      flex: 1;
+      font-size: 14px;
+      text-align: left;
+      color: #202223;
+      margin-left: 10px;
+    }
+  }
+}

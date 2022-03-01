@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  height: 61px;
+  background-color: #fff;
+}
+.roomInfo {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #202223;
+  padding-left: 1rem;
+}
+.wrapper {
+  position: relative;
+}
+.backButton {
+  border: none;
+  background: none;
+  padding-right: 1rem;
+}
+.flag {
+  margin-right: 1rem;
+}
+.selected {
+  background: #f7d5cf;
+}

@@ -1,0 +1,230 @@
+.cancelButtonContainer {
+  margin-top: auto;
+  padding: 1.6rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.cancelButton {
+  margin-left: auto;
+  button {
+    color: #d82c0d;
+    border-color: #d82c0d;
+  }
+}
+
+.subHeadText {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.attachedFilesContainer {
+  width: 70%;
+  margin-left: 15px;
+
+  &__subContainer {
+    margin-top: 10px;
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+
+      &__nameContainer {
+        display: flex;
+      }
+
+      &__name {
+        display: flex;
+        align-items: center;
+      }
+
+      &__icon {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+.clientInformationItem {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  color: #212b36;
+}
+
+.clientInformationHeader {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.noticeContainer {
+  padding: 2rem;
+
+  div.Polaris-Label label {
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__subContainer {
+    margin-top: 15px;
+
+    &__block {
+      margin-top: 10px;
+    }
+
+    &__fileHeader {
+      font-family: SF Pro Text;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__prompt {
+    font-size: 12px;
+  }
+}
+
+.additionalLink {
+  a {
+    text-decoration: none;
+    :hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.scrollableContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    scrollbar-color: #6969dd #e0e0e0;
+    scrollbar-width: thin;
+    width: 6px;
+    margin-left: 1rem;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #fbfbfc;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #dadee8;
+    border-radius: 3px;
+  }
+}
+
+.mainContainer {
+  align-items: center;
+  border-bottom: 1px solid #dfe3e8;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.6rem;
+  width: 100%;
+}
+
+.sessionLinkContainer {
+  padding: 1.6rem;
+
+  &__header {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__textField {
+    margin-top: 15px;
+  }
+}
+
+.clientContainer {
+  padding: 1.6rem;
+
+  &__subContainer {
+    margin-top: 20px;
+  }
+
+  &__client {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.divider,
+.plansDivider {
+  margin-top: 15px;
+  border-bottom: 1px solid #dfe3e8;
+  height: 1px;
+  width: 100%;
+
+  &.bothMargins {
+    margin-bottom: 15px;
+  }
+}
+
+.plansDivider {
+  margin-bottom: 15px;
+}
+
+.sendButtonContainer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+
+  &__button {
+    margin-left: auto;
+  }
+}
+
+.notesTextField {
+  margin-top: 10px;
+  input {
+    background: #f1f2f3;
+  }
+}
+
+.initialsContainer {
+  margin-top: 20px;
+  &__subContainer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.saveNoteButton {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+}
+
+.notesListContainer {
+  margin-top: 10px;
+}
+
+.tree {
+  padding: 20px 8px 0 8px;
+}
+.plansInfoList {
+  padding: 0 0 0 20px;
+}
+
+.loadMore {
+  display: flex;
+  justify-content: center;
+}

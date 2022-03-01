@@ -1,0 +1,259 @@
+@import 'src/assets/styles/_buttons.scss';
+@import 'src/assets/styles/_card.scss';
+@import 'src/assets/styles/_common_nonbreaking.scss';
+@import 'src/assets/styles/_fonts.scss';
+@import 'src/assets/styles/_mixins.scss';
+@import 'src/assets/styles/_signin_page.scss';
+@import 'src/assets/styles/_title.scss';
+@import 'src/assets/styles/_welcome.scss';
+@import 'src/assets/styles/_helpers.scss';
+@import 'src/assets/styles/_colors';
+
+.Polaris {
+  &-DataTable {
+    &__Cell--header {
+      border-bottom: none !important;
+    }
+    &__TableRow:hover {
+      th,
+      td {
+        background-color: $table-bg !important;
+      }
+    }
+  }
+
+  &-Avatar {
+    &--styleOne,
+    &--styleTwo,
+    &--styleThree,
+    &--styleFour,
+    &--styleFive,
+    &--styleSix {
+      background: $avatar-bg;
+    }
+    &__Initials {
+      color: #fff !important;
+    }
+  }
+
+  &-Tag {
+    font-size: 1.3rem;
+    border-radius: 1rem;
+    min-height: 2rem;
+    background-color: $tag-bg;
+    .Polaris-Tag__Button {
+      &:hover {
+        background: none !important;
+      }
+    }
+  }
+
+  &-Tabs__Tab:focus {
+    box-shadow: none !important;
+  }
+
+  &-TopBar {
+    &-Menu {
+      &__Activator {
+        &:hover {
+          background-color: $header-bg;
+        }
+      }
+    }
+  }
+
+  &-Card__Header {
+    .Polaris-Button__Text {
+      @media print {
+        display: none;
+      }
+    }
+  }
+}
+
+.Polaris-CheckableButton.Polaris-CheckableButton__CheckableButton--selected {
+  color: var(--p-text, none);
+}
+
+.Polaris-Checkbox__Icon svg {
+  fill: var(--p-icon-on-interactive, #42cea9);
+}
+
+.Polaris-Layout__Annotation {
+  padding-top: 0 !important;
+  margin-left: 0;
+}
+
+.Polaris-SkeletonPage__PrimaryAction {
+  display: flex;
+}
+
+.Polaris-Page-Header__BreadcrumbWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.Polaris-TopBar-Menu__Activator:active,
+.Polaris-TopBar-Menu__Activator[aria-expanded='true'] {
+  background: none;
+}
+
+.Polaris-Page-Header__RightAlign,
+.Polaris-Page-Header__PrimaryActionWrapper,
+.Polaris-SkeletonPage__PrimaryAction {
+  align-items: center;
+}
+
+.Polaris-Layout__AnnotatedSection {
+  border-top: none !important;
+}
+.Polaris-Layout__Annotation,
+.Polaris-Layout__AnnotationContent {
+  @media (max-width: 768px) {
+    margin: 2rem;
+    max-width: 100%;
+  }
+}
+.newEvent-wrapper {
+  .Polaris-Layout__Annotation,
+  .Polaris-Layout__AnnotationContent {
+    @media (max-width: 768px) {
+      margin-left: 2rem;
+      max-width: 100%;
+    }
+  }
+}
+
+.Polaris-Tabs__Tab--selected .Polaris-Tabs__Title::before {
+  background: $primary-one-color !important;
+}
+
+.Polaris-Tabs__Tab:focus:not(:active) .Polaris-Tabs__Title::after {
+  box-shadow: none;
+}
+
+.Polaris-Button#button-link {
+  color: $active-link;
+}
+
+.Polaris-PositionedOverlay {
+  z-index: 600 !important;
+}
+/*
+  This code needs to replace errorText in case
+  when we get error in DropZone on mobile device
+
+  TODO: delete this hack,
+  when shopify polaris 'errorOverlayText' property will repaired
+*/
+
+.DropzoneWithError {
+  .Polaris-DropZone__Overlay .Polaris-DisplayText.Polaris-DisplayText--sizeSmall,
+  .Polaris-DropZone__Overlay .Polaris-Stack__Item .Polaris-Caption {
+    position: relative;
+    visibility: hidden;
+    &::after {
+      display: block;
+      visibility: visible;
+      content: 'Click here to upload file';
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+.table__cut-cell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @media (min-width: 300px) {
+    max-width: 120px;
+  }
+  @media (min-width: 768px) {
+    max-width: 150px;
+  }
+  @media (min-width: 1024px) {
+    max-width: 200px;
+  }
+  @media (min-width: 1440px) {
+    max-width: 250px;
+  }
+  @media (min-width: 1920px) {
+    max-width: 100%;
+  }
+}
+
+.tabs-table {
+  .Polaris-Tabs__Wrapper {
+    margin-bottom: 2rem;
+    border-top: 0;
+    .Polaris-Tabs__Tab--selected {
+      span.Polaris-Tabs__Title::before {
+        background: $primary !important;
+      }
+    }
+  }
+}
+
+.Polaris-Button--primary {
+  background: $primary !important;
+}
+
+.Polaris-Checkbox__Input:checked + .Polaris-Checkbox__Backdrop {
+  border-color: $primary-one-color !important;
+}
+.Polaris-Checkbox__Backdrop::before {
+  background-color: $primary-one-color !important;
+}
+.Polaris-RadioButton__Input:checked + .Polaris-RadioButton__Backdrop {
+  border-color: $primary-one-color;
+}
+
+.single-item-page {
+  .Polaris-Card + .Polaris-Card {
+    margin-top: 2.1rem;
+  }
+
+  .Polaris-Layout__Annotation {
+    padding: 2rem 2rem 0rem 0;
+  }
+}
+
+.Polaris-Popover__Content {
+  max-width: 80rem;
+  @media (max-width: 768px) {
+    max-width: 40rem;
+  }
+}
+
+.Polaris-Modal-Dialog__Modal {
+  width: 90%;
+  border-radius: 10px;
+}
+
+@media (max-width: 48.0525em) {
+  .Polaris-Modal-Dialog__Modal {
+    left: calc(50vw - 45%);
+    bottom: 5%;
+  }
+}
+
+h2.Polaris-DisplayText.Polaris-DisplayText--sizeSmall {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+span.Polaris-RadioButton__Backdrop::before {
+  background: $primary;
+}
+
+.Polaris-Spinner svg {
+  fill: $primary-one-color;
+}
+
+.Polaris-Button--loading.Polaris-Button--disabled svg {
+  fill: #fff;
+}

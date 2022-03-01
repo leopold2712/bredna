@@ -1,0 +1,21 @@
+.complete-profile-drop-zone {
+  .Polaris-DropZone--hasOutline {
+    padding: 0;
+    height: 156px;
+    width: 161px;
+  }
+
+  .file-upload-with-content {
+    .Polaris-DropZone-FileUpload {
+      .Polaris-Stack--vertical {
+        .Polaris-Stack__Item:last-child::after {
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+.sticky {
+  z-index: 100;
+}

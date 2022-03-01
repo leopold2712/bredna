@@ -1,0 +1,16 @@
+.divider {
+  display: flex;
+  align-items: center;
+
+  &Info {
+    flex: 1;
+    font-size: 12px;
+    font-weight: 300;
+    color: #949fb7;
+  }
+
+  &Line {
+    flex: 4;
+    border-bottom: 1px solid #f4f6f8;
+  }
+}

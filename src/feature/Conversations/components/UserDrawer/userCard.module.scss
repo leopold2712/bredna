@@ -1,0 +1,160 @@
+button.action {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.card {
+  width: 285px;
+  height: calc(100vh - 160px);
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 500;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 2px 16px rgba(33, 43, 54, 0.08);
+  max-height: calc(100vh - 160px);
+  overflow: auto;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.8rem 2rem;
+    border-bottom: 1px solid #dfe3e8;
+    p {
+      font-weight: 600px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    flex-direction: column;
+    border-bottom: 1px solid #dfe3e8;
+    .username {
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 10px;
+      margin-bottom: 6px;
+      word-break: break-all;
+    }
+  }
+}
+.plan {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid #c1c8d7;
+  padding: 20px 30px;
+
+  &__wrapper {
+    background: #fbfbfc;
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &Indent {
+    @media (max-width: 1485px) and (min-width: 1240px) {
+      flex: 1;
+    }
+    @media (max-width: 1240px) {
+      flex: 0.5;
+    }
+    flex: 2;
+    height: 100%;
+  }
+
+  &Cnt {
+    flex: 8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &Header {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+
+  &Sessions {
+    font-size: 14px;
+    font-weight: 400;
+    color: #949fb7;
+    line-height: 20px;
+  }
+
+  &LeftIndent {
+    padding-left: 2rem;
+  }
+}
+
+.date {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px 0 20px 30px;
+  border-bottom: 1px solid #c1c8d7;
+
+  &Cnt {
+    flex: 8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &Header {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+
+  &HeaderCnt {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &HeaderLink {
+    font-size: 14px;
+    font-weight: 400;
+    color: #949fb7;
+    line-height: 20px;
+    text-decoration: underline;
+    margin-right: 15px;
+  }
+
+  &Line {
+    font-size: 14px;
+    font-weight: 400;
+    color: #949fb7;
+    line-height: 20px;
+  }
+
+  &Underline {
+    text-decoration: underline;
+  }
+}
+.modalTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #212b36;
+}
+
+.infoWrapper {
+  position: relative;
+}
+
+.userImage {
+  width: 133px;
+  height: 133px;
+  border-radius: 50%;
+}
+
+.userError {
+  color: red;
+  padding: 20px;
+}

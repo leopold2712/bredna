@@ -1,0 +1,19 @@
+.settings-overload {
+  &__button {
+    .Polaris-Button__Content {
+      .Polaris-Button__Text {
+        color: #006fbb;
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+  }
+  &__text {
+    color: #596172;
+  }
+  &__icon {
+    .Polaris-Icon svg {
+      fill: #949fb7;
+    }
+  }
+}

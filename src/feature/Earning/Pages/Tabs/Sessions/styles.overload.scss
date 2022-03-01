@@ -1,0 +1,69 @@
+$color: rgba(193, 200, 215, 0.55);
+
+.tables__session-details {
+  table {
+    tbody {
+      background: #fff;
+    }
+  }
+
+  .Polaris-DataTable__Icon {
+    display: none!important;
+  }
+
+  thead {
+   th {
+     vertical-align: middle;
+     background: $color;
+
+     &:first-child {
+       border-top-left-radius: 3px;
+       border-bottom-left-radius: 3px;
+     }
+
+     &:last-child {
+       border-top-right-radius: 3px;
+       border-bottom-right-radius: 3px;
+     }
+   }
+
+    th, button {
+      font-weight: 700;
+      font-size: 16px;
+      padding: 0;
+      margin: 0;
+    }
+
+    button {
+      padding-right: 35px;
+      position: relative;
+
+      &:after {
+        display: none;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        background: url("../../../../../assets/images/sort.svg") no-repeat;
+        width: 25px;
+        height: 25px;
+        top: 15%;
+        right: 0;
+      }
+    }
+
+    th[aria-sort="ascending"] {
+      button {
+        &:before {
+          transform: translate(0, -50%) rotate(180deg);
+        }
+      }
+    }
+  }
+
+
+  .Polaris-DataTable__Cell {
+    padding: 10px 0 10px 35px !important;
+  }
+}

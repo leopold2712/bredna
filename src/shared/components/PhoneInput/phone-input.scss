@@ -1,0 +1,12 @@
+.phone-input-errors {
+  display: flex;
+  margin-top: 4px;
+
+  .Polaris-Icon {
+    margin: 0 6px 0 0;
+  }
+
+  span {
+    color: var(--p-text-critical, #bf0711);
+  }
+}

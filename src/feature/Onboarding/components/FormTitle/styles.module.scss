@@ -1,0 +1,14 @@
+@import 'src/assets/styles/_mixins';
+
+h1.formTitle {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0 0 40px;
+  text-align: center;
+
+  @media (max-width: $screen-xs-max) {
+    margin: 0 0 20px;
+    font-size: 18px;
+  }
+}

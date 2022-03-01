@@ -1,0 +1,12 @@
+@import 'src/assets/styles/_mixins';
+
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+}
+
+.link {
+  padding-top: 10px;
+}

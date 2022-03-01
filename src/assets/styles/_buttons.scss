@@ -1,0 +1,81 @@
+@import 'src/assets/styles/_colors';
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  padding: 8px 15px;
+  transition: all 0.1s linear;
+  font-size: 14px;
+  font-weight: 400;
+  height: auto;
+  text-transform: none;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  box-shadow: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  line-height: 1.4;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 165px;
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.btn_template {
+  color: #fff;
+  border: none;
+  padding: 9px 15px;
+  background: $primary;
+  box-shadow: 0px 3px 5px 0px rgba(#5a5a5a, 0.25);
+  transition: 0.1s ease all;
+
+  &:focus {
+    color: #fff;
+  }
+
+  &:active {
+    color: #fff;
+  }
+
+  &:hover {
+    background: $primary-hover;
+  }
+}
+
+.btn_gray_empty {
+  border: 1px solid #c4cdd5;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+  box-shadow: 0px 1px 0px rgba(22, 29, 37, 0.05);
+  color: #212b36;
+
+  &:focus {
+    color: #212b36;
+  }
+
+  &:active {
+    color: #212b36;
+  }
+
+  &:hover {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.04) 3.12%,
+      rgba(97, 121, 133, 0.04) 100%
+    );
+  }
+}

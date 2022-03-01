@@ -1,0 +1,106 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  h1 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #202223;
+  }
+}
+
+.addButton {
+  button {
+    width: 88px;
+    background: linear-gradient(180deg, #fafbfc 0%, #ebeff2 100%);
+    border: 1px solid #c4cdd5;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 0px rgba(22, 29, 37, 0.05);
+    border-radius: 3px;
+  }
+}
+
+.divider {
+  margin: 20px 0;
+  width: 100%;
+  height: 1px;
+  background: #dfe3e8;
+}
+
+.certificateContainer {
+  margin-top: 15px;
+  display: flex;
+}
+
+.certificateSubContainer {
+  width: 145px;
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+}
+
+.attachedFilesContainer {
+  width: 70%;
+  margin-left: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .subContainer {
+    width: 100%;
+    bottom: 5px;
+    left: 0;
+    margin-top: 10px;
+    flex: 1;
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+
+      .nameContainer {
+        display: flex;
+      }
+
+      .name {
+        display: flex;
+        align-items: center;
+      }
+
+      .icon {
+        transform: rotate(45deg);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.certificatesActionsContainer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+
+  .subcontainer {
+    display: flex;
+  }
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: space-between;
+  button {
+    width: 88px;
+    background: linear-gradient(180deg, #fafbfc 0%, #ebeff2 100%);
+    border: 1px solid #c4cdd5;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 0px rgba(22, 29, 37, 0.05);
+    border-radius: 3px;
+  }
+  button:nth-child(1) {
+    margin-right: 5px;
+    background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%) !important;
+    &:hover {
+      border: 1px solid #c4cdd5;
+    }
+  }
+}

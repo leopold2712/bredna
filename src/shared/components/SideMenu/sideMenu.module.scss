@@ -1,0 +1,14 @@
+.sideMenu {
+  background-color: #f6f6f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-right: 1px solid #ddd;
+}
+nav ul {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+}

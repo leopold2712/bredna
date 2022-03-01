@@ -1,0 +1,22 @@
+@import '../../../assets/styles/mixins';
+
+@keyframes spinner-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.thin-spinner {
+  img {
+    animation: spinner-rotate 500ms linear infinite;
+    width: 135px;
+    height: 135px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    img {
+      width: 68px;
+      height: 68px;
+    }
+  }
+}

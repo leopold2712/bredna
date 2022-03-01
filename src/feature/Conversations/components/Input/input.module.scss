@@ -1,0 +1,47 @@
+.wrapper {
+  display: flex;
+  padding: 13px 20px;
+  .input {
+    flex: 1;
+    border-radius: 3px;
+    display: flex;
+    margin-left: 1rem;
+    div:nth-child(1) {
+      width: 30px;
+      text-align: center;
+      margin-right: 5px;
+    }
+    input {
+      flex: 1;
+      padding: 1rem;
+      border: none;
+      outline: none;
+      background-color: #f1f2f3;
+      color: #202223;
+      font-size: 16px;
+      &::placeholder {
+        color: #202223;
+      }
+    }
+  }
+  .smile {
+    background-color: #fff;
+    border: none;
+    height: 100%;
+    cursor: pointer;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .send {
+    margin-left: 15px;
+    background-color: #fff;
+    border: none;
+    overflow: none;
+    cursor: pointer;
+    svg {
+      fill: #5c5f62;
+    }
+  }
+}

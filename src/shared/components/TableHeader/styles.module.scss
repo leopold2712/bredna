@@ -1,0 +1,28 @@
+$color: rgba(193, 200, 215, 0.55);
+
+.table_header {
+  display: flex;
+  justify-content: space-between;
+  background-color: $color;
+  padding: 11px 35px;
+  border-radius: 3px;
+
+  &__name {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 11px 20px;
+
+    &.session {
+      margin-top: 20px;
+
+      .table_header__name:not(:first-child) {
+        display: none;
+      }
+    }
+  }
+}

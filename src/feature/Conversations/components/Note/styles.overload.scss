@@ -1,0 +1,14 @@
+.note {
+  &__overload-avatar {
+    .Polaris-Avatar {
+      background: #919eab !important;
+      margin-right: 1rem;
+    }
+  }
+}
+.message {
+  &__overload {
+    padding: 1rem;
+    padding-left: 0;
+  }
+}

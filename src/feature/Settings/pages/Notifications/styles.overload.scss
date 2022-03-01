@@ -1,0 +1,8 @@
+.notifications__overload {
+  @media (max-width: 768px) {
+    .Polaris-Layout__Annotation,
+    .Polaris-Layout__AnnotationContent {
+      margin: 1.6rem 0 !important;
+    }
+  }
+}

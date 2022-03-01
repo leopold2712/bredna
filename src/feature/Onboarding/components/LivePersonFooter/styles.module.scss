@@ -1,0 +1,19 @@
+@import 'src/assets/styles/_mixins';
+
+.footer {
+  background: #ffffff;
+  padding: 45px 0 55px;
+  text-align: center;
+  width: 100%;
+
+  @media (max-width: $screen-xs-max) {
+    padding: 45px 0 20px;
+  }
+
+  .img {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 4px;
+    max-width: 86px;
+  }
+}

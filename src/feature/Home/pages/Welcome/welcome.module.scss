@@ -1,0 +1,144 @@
+@import 'src/assets/styles/_mixins';
+
+$success_color: #007f5f;
+$critical_color: #d72c0d;
+$cardTextS_color: #596172;
+
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  height: 90px;
+  @media (max-width: 490px) {
+    padding-left: 1.6rem;
+  }
+  @media (max-width: $screen-xs-max) {
+    flex-direction: column;
+    align-items: stretch;
+    height: 60px;
+  }
+
+  .title {
+    @media (max-width: $screen-xs-max) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 45px;
+    }
+    p.name {
+      font-size: 20px;
+      font-weight: 600;
+      @media (max-width: $screen-xs-max) {
+        font-size: 18px;
+      }
+    }
+
+    p.great {
+      font-family: SF Pro Text;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 20px;
+      color: #000000;
+      margin-top: 10px;
+      @media (max-width: $screen-xs-max) {
+        font-size: 15px;
+        font-weight: 300;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.sectionHeader {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  span.title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  span.subTitle {
+    font-size: 14px;
+  }
+}
+
+.cardHeader {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.cardHeaderS {
+  font-size: 14px;
+  font-weight: 500;
+  & span {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.cardCounter {
+  font-size: 24px;
+  font-weight: 700;
+
+  &_up {
+    font-weight: 400;
+    color: $success_color;
+  }
+
+  &_down {
+    font-weight: 400;
+    color: $critical_color;
+  }
+}
+
+.cardCounterS {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.cardTextS {
+  font-size: 12px;
+  font-weight: 400;
+  color: $cardTextS_color;
+}
+
+.cardTextL {
+  font-size: 24px;
+  font-weight: 400;
+  & span {
+    font-size: 24px;
+    font-weight: 400;
+  }
+}
+
+.cardTextM {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.picture {
+  position: relative;
+  height: 120px;
+}
+
+.ellipse {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  z-index: 10;
+}
+.image {
+  position: absolute;
+  top: 25px;
+  left: -28px;
+  z-index: 20;
+
+  &_mod {
+    top: 33px;
+  }
+}
+
+.banner {
+  padding-bottom: 20px;
+}

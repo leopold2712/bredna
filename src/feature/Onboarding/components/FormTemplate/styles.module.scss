@@ -1,0 +1,37 @@
+@import 'src/assets/styles/_mixins';
+
+.formWrapper {
+  background: #fbfbfc;
+  border-radius: 3px;
+
+  width: 100%;
+  padding: 85px 20px 20px;
+  position: relative;
+
+  @media (max-width: $screen-xs-max) {
+    padding: 80px 35px 20px;
+  }
+}
+
+.form {
+  max-width: 338px;
+  margin: 0 auto;
+
+  @media (max-width: 475px) {
+    max-width: 260px;
+  }
+}
+
+.imageDecoration {
+  width: 255px;
+  min-width: 255px;
+  border-radius: 3px;
+  margin: 0 0 0 20px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (max-width: $screen-xs-max) {
+    display: none;
+  }
+}

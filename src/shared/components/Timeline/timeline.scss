@@ -1,0 +1,49 @@
+.timeline__header {
+  margin-top: 15px;
+  padding: 16px 17px 18px 16px;
+  border-bottom: 1px solid #dfe3e8;
+  display: flex;
+  justify-content: space-between;
+}
+.timeline__input__wrapper {
+  display: flex;
+  align-items: flex-end;
+  margin: 0 auto;
+  padding-top: 17px;
+  width: 95%;
+  .input {
+    margin-left: 10px;
+    padding: 2px;
+    flex: 1;
+    background-color: #fff;
+    border: 1px solid #c4cdd5;
+    border-radius: 3px;
+    display: flex;
+    input {
+      margin: 6px;
+      border: none;
+      color: #637381;
+      font-size: 16px;
+      width: 100%;
+      outline: none;
+    }
+    .smile__button {
+      background-color: #fff;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 0 16px;
+      img {
+        height: 20px;
+        width: 20px;
+        max-width: none;
+      }
+    }
+  }
+}
+.timeline__event {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 12px;
+}

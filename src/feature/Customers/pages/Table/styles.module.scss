@@ -1,0 +1,189 @@
+@import 'src/assets/styles/_mixins.scss';
+
+.resourceItem {
+  display: flex;
+  justify-content: center;
+  color: #202223 !important;
+  min-height: 40px;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
+  @media (max-width: 1550px) {
+    font-size: 12.5px;
+  }
+  .itemCell {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 1200px) {
+      justify-content: flex-start;
+    }
+    &:first-child {
+      flex: 1;
+      flex-direction: column;
+      align-items: flex-start;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    &:nth-child(2) {
+      flex: 2;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    &:nth-child(3) {
+      flex: 1.2;
+    }
+    &:nth-child(4) {
+      flex: 1.2;
+    }
+    &:nth-child(5) {
+      flex: 1.4;
+    }
+    &:nth-child(6) {
+      flex: 1.4;
+    }
+    &:last-child {
+      flex: 1;
+    }
+    .new-badge {
+      padding-left: 1rem;
+    }
+
+    .itemBadge {
+      margin-left: 5px;
+    }
+  }
+
+  .paddingCell {
+    padding: 2.5px 0;
+  }
+
+  .emptyCell {
+    margin-right: 60px;
+  }
+}
+
+.wideText {
+  width: 95%;
+  text-align: center;
+}
+
+.planTextMobile {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 143% */
+
+  /* Text/Default */
+
+  color: #202223;
+}
+
+.strongTextMobile {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 143% */
+
+  /* Text/Default */
+
+  color: #202223;
+}
+
+.filterSelect {
+  padding-left: 180px;
+  @media (max-width: 1200px) {
+    padding-left: 20px;
+  }
+  @media (max-width: 900px) {
+    padding-top: 10px;
+    padding-left: 0px;
+  }
+  span:nth-child(2) {
+    font-weight: 600;
+  }
+}
+
+.buttons {
+  display: flex;
+  padding: 9px 0 30px 0;
+  @media (max-width: 489px) {
+    padding: 0 0 20px 16px;
+  }
+
+  button {
+    display: flex;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    margin-right: 29px;
+  }
+
+  .iconWrapper {
+    margin-right: 9px;
+  }
+}
+
+.customerInformation {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  font-weight: 600;
+}
+
+.customerInformationMobile {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  /* identical to box height, or 111% */
+
+  /* Text/Default */
+
+  color: #202223;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.tagWrapper {
+  padding: 3.5px 2.5px;
+}
+
+.emptyName {
+  @media (max-width: 1200px) {
+    padding-left: 60px;
+  }
+}
+.datePickerWrapper {
+  max-width: 572px;
+}
+
+.clientsFilters {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $screen-xs-max) {
+    flex-direction: column;
+  }
+  .filters {
+    flex: 1;
+
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 10px;
+    }
+  }
+}

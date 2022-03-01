@@ -1,0 +1,159 @@
+@import 'src/assets/styles/_mixins';
+
+.formTitle {
+  text-align: center;
+  margin: 0 auto 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: $screen-xs-max) {
+  body {
+    background-color: #fff;
+  }
+
+  .page {
+    padding: 0 !important;
+  }
+
+  .wrapperInner {
+    max-width: 700px !important;
+    padding: 35px 20px 0 !important;
+  }
+
+  .contentInner {
+    position: relative;
+  }
+
+  .above {
+    position: relative;
+    left: -2rem;
+    width: 100vw;
+    background-color: #fbfbfc;
+  }
+
+  .header {
+    background-color: #084c3f;
+    color: white;
+    width: 100vw;
+    height: 160px;
+    position: relative;
+    top: -4rem;
+    padding-top: 2.5rem;
+    font-size: 15px;
+  }
+
+  .headWrapper {
+    justify-content: center;
+  }
+
+  .titleWrapper {
+    margin: 0 8px 0 0 !important;
+  }
+
+  .title {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+  }
+
+  .img {
+    max-width: 110px !important;
+    bottom: -4px !important;
+  }
+
+  .contentWrapper {
+    text-align: center;
+    margin: 0 auto 25px !important;
+    max-width: 85%;
+  }
+
+  .contentListWrapper {
+    margin: 0 0 15px 30px !important;
+    padding: 0 20px 0 25px;
+    font-size: 12px;
+  }
+
+  .imageGallery {
+    display: block !important;
+  }
+
+  .formWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100% !important;
+    padding: 0.65rem 0;
+  }
+
+  .btnJoin {
+    max-width: 50%;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+  }
+
+  .customLinkWrap {
+    font-size: 15px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #dfe3e8;
+    height: 88px;
+    position: relative;
+    left: -2rem;
+    width: 100vw;
+    background-color: #fff;
+    padding-bottom: 10px;
+  }
+
+  .imageWrapper {
+    display: none;
+  }
+
+  .footerContent {
+    display: none;
+  }
+
+  .rowTitle {
+    margin: 0 0 3px;
+    padding-right: 20px;
+    font-size: 15px;
+    font-weight: 600 !important;
+
+    &::before {
+      width: 24px !important;
+      height: 24px !important;
+      background-size: 1.1rem;
+      top: 0 !important;
+    }
+  }
+
+  .rowContent {
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 300;
+    color: #000 !important;
+  }
+
+  .formTitle {
+    max-width: 230px;
+    font-size: 15px;
+    font-weight: 500 !important;
+  }
+}
+
+@media (max-width: $screen-md) {
+  .content {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: $screen-md-max) {
+  .formTitle {
+    text-align: center;
+    margin: 0 auto 10px !important;
+  }
+}

@@ -1,0 +1,39 @@
+.certificateItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 2.1rem;
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 2.1rem;
+  }
+
+  &__attachedFile {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__fileName {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+}
+
+.bordered {
+  border-top: 1px solid #dfe3e8;
+  padding-top: 1rem;
+}

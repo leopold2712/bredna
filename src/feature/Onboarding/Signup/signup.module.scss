@@ -1,0 +1,188 @@
+@import 'src/assets/styles/_mixins';
+
+.signupPage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  font-family: 'SF Pro Text';
+
+  main {
+    flex: 1;
+  }
+}
+
+.logo {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #949fb7;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.header {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.cbWrapper {
+  position: relative;
+  height: 66px;
+
+  .cbPlacement {
+    position: absolute;
+    top: 16px;
+    left: -58px;
+    width: 416px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .cbInput {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      input {
+        margin-right: 3px;
+      }
+    }
+
+    .cbError {
+      padding-top: 5px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      position: unset;
+      width: 100%;
+      justify-content: center;
+      margin-top: 14px;
+
+      .cbControl {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .cbContent {
+    font-family: SF Pro Text;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    .cbTermsConditions {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .signup {
+    background-color: #fff !important;
+    margin-top: 0 !important;
+    height: 754px;
+  }
+
+  .logoSignup {
+    padding-top: 30px !important;
+  }
+
+  .formWrapper {
+    padding: 50px 20px 20px !important;
+    background-color: #fbfbfc !important;
+
+    .passwordForm {
+      height: 0;
+
+      .mobileFooterGroup {
+        position: relative;
+        left: -4rem;
+        width: 100vw;
+      }
+    }
+  }
+
+  .header {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .headerText {
+    font-size: 14px;
+    font-weight: 400;
+    width: 80%;
+    margin: 20px auto 16px;
+    color: #000;
+  }
+
+  .inputLabel {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .passwordMemo {
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 5px;
+    line-height: 14px;
+    color: #949fb7;
+  }
+
+  .btnWrapper {
+    margin-top: 1.6px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    .btnCreateAccount {
+      width: 65% !important;
+    }
+  }
+
+  .termsConditions {
+    font-size: 12px;
+    font-weight: 400;
+    width: 100%;
+    margin-top: 10px !important;
+    text-align: center;
+    line-height: 16px;
+  }
+
+  .footer {
+    width: 100vw;
+    padding-top: 10px;
+
+    .customLinkWrap {
+      padding-top: 26px !important;
+
+      .account {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .bFooter {
+    padding: 16px 0 !important;
+    background-color: #f4f6f8;
+    margin-top: 10px;
+  }
+}

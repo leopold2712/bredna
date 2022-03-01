@@ -1,0 +1,32 @@
+@import 'src/assets/styles/_colors.scss';
+
+.availabilitySection {
+  margin-top: 14px;
+
+  &__subSection {
+    flex: 1;
+  }
+}
+.groupButtons {
+  button {
+    border: 1px solid $primary-one-color;
+    height: 36px;
+    width: 36px;
+  }
+  div:first-child {
+    display: inline-block;
+  }
+  div + div {
+    display: inline-block;
+    margin-left: 5px;
+  }
+}
+.selectedButtonDay {
+  button {
+    background: $primary;
+    color: white;
+  }
+  button:hover {
+    background: $primary;
+  }
+}

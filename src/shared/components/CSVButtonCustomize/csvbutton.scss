@@ -1,0 +1,22 @@
+.export-button {
+  .Polaris-Button--outline {
+    color: #637381;
+    border: none;
+    &:hover {
+      background: none;
+      border-color: none;
+      .Polaris-Button__Text {
+        color: #212b36;
+      }
+    }
+    &:focus {
+      box-shadow: none;
+    }
+    &:active {
+      background: none;
+    }
+    svg {
+      fill: #637381;
+    }
+  }
+}

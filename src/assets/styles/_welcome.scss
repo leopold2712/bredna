@@ -1,0 +1,144 @@
+.welcome_page {
+  background: #084c3f;
+  padding: 85px 20px 50px;
+  min-height: 100vh;
+
+  .welcome_wrapper_inner {
+    background: #fbfbfc;
+    border-radius: 3px;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 65px 50px;
+
+    .welcome_content {
+      width: 450px;
+      padding: 0 0 0 25px;
+
+      .welcome_header {
+        .welcome_head_wrapper {
+          align-items: center;
+          margin: 0 0 20px;
+
+          .welcome_title_wrapper {
+            margin: 0 15px 0 0;
+
+            .welcome_title {
+              font-weight: 600;
+              font-size: 36px;
+              line-height: 1.1;
+              display: inline-block;
+              vertical-align: middle;
+            }
+          }
+
+          .logo_wrapper {
+            img {
+              position: relative;
+              bottom: -6px;
+            }
+          }
+        }
+
+        .content_wrapper {
+          margin: 0 0 50px;
+        }
+      }
+
+      .content_list_wrapper {
+        margin: 0 0 50px;
+
+        .content_row {
+          + .content_row {
+            margin: 25px 0 0;
+          }
+        }
+
+        .row_title {
+          position: relative;
+          font-weight: 700;
+          text-transform: uppercase;
+
+          &::before {
+            position: absolute;
+            content: '';
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #084c3f;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url("data:image/svg+xml,%3Csvg width='7' height='6' viewBox='0 0 7 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.78381 5.33937L0.158841 3.68914C-0.0529468 3.47406 -0.0529468 3.12641 0.158841 2.91133C0.370628 2.69625 0.712954 2.69625 0.924742 2.91133L2.13588 4.1413L5.54723 0.1923C5.74223 -0.0387326 6.08401 -0.0651363 6.31042 0.132341C6.53792 0.330369 6.56446 0.676918 6.36946 0.9074L2.57787 5.30802C2.47983 5.42464 2.33792 5.49394 2.18734 5.5C2.02322 5.50055 1.8851 5.44279 1.78381 5.33937Z' fill='white'/%3E%3C/svg%3E");
+            right: 100%;
+            top: 1px;
+            margin: 0 10px 0 0;
+          }
+        }
+
+        .row_content {
+          color: #949fb7;
+
+          br {
+            @media (max-width: $screen-md-max) {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .image_gallery {
+        display: none;
+
+        .gallery_list {
+          margin: 0 -4px 15px;
+
+          .list_item {
+            width: 33.33%;
+            padding: 0 4px;
+          }
+
+          .gallery_image {
+            padding: 0 0 100%;
+            border-radius: 3px;
+          }
+        }
+      }
+
+      .form_wrapper {
+        max-width: 375px;
+
+        .form_title {
+          font-weight: 600;
+          margin: 0 0 20px;
+        }
+
+        .btn_join {
+          width: 100%;
+        }
+      }
+
+      .custom_link_wrap {
+        padding-top: 10px;
+      }
+    }
+
+    .welcome_image_wrapper {
+      width: calc(100% - 450px);
+
+      img {
+        margin: 0 0 0 auto;
+      }
+    }
+  }
+
+  .footer_content {
+    padding: 15px 0;
+    color: #fff;
+    font-size: 12px;
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 0 0 5px;
+    }
+  }
+}

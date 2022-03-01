@@ -1,0 +1,58 @@
+.note {
+  display: flex;
+  flex-direction: column;
+  background-color: #fbfbfc;
+  padding: 10px 20px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+
+  .topRow {
+    display: flex;
+    align-items: center;
+
+    .title {
+      padding: 0 20px 0 14px;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .info {
+      display: flex;
+      flex: 1;
+      color: #949fb7;
+      font-size: 16px;
+      align-items: center;
+
+      .ellipse {
+        display: block;
+        width: 4px;
+        height: 4px;
+        background-color: #949fb7;
+        border-radius: 2px;
+        margin: 0 10px;
+      }
+    }
+
+    .editButton {
+      color: #248ad3;
+    }
+  }
+
+  .bottomRow {
+    .description {
+      padding: 12px 0;
+      color: #000;
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        margin: revert;
+        width: 100%;
+      }
+    }
+  }
+}

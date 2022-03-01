@@ -1,0 +1,13 @@
+.tags {
+  &__filter-overload {
+    ul.Polaris-OptionList {
+      padding: 0;
+    }
+    label.Polaris-OptionList-Option__Label {
+      padding: 0;
+    }
+  }
+}
+.clients__filter-tags {
+  color: #333;
+}

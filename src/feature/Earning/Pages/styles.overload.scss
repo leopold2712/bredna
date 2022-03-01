@@ -1,0 +1,9 @@
+.earning-page {
+  .Polaris-Tabs__Wrapper {
+    padding: 0;
+  }
+
+  .Polaris-Tabs__Tab--selected .Polaris-Tabs__Title::before {
+    background-color: #000!important;
+  }
+}

@@ -1,0 +1,9 @@
+export type { SlotDTO } from './slot.dto';
+export type { GetSlotsRequestDTO } from './getSlots.request.dto';
+export type { UpdateSlotsRequestDTO } from './updateSlots.request.dto';
+export type { DeleteSlotRequestDTO } from './deleteSlot.request.dto';
+export type { DefinitionDTO } from './definition.dto';
+export type { CreateSlotDTO } from './createSlot.request.dto';
+export type { SessionDTO } from './session.dto';
+export type { SlotFullInfoDTO } from './slotInfo.dto';
+export type { SendMessageRequestDTO } from './sendMessage.request.dto';

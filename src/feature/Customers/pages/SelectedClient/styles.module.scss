@@ -1,0 +1,84 @@
+.header {
+  display: inline;
+  margin-right: 0.8rem;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.8rem;
+}
+.clientID {
+  margin-top: 53px;
+}
+.submitButton {
+  padding-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    background: linear-gradient(180deg, #fafbfc 0%, #ebeff2 100%);
+    border: 1px solid #c4cdd5;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 0px rgba(22, 29, 37, 0.05);
+    border-radius: 3px;
+    padding: 8px 28px;
+  }
+}
+
+.emailTitle {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21px;
+  color: #000;
+}
+
+.emailSubtitle {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000;
+}
+
+.noticesList {
+  max-height: 40rem;
+  overflow-y: scroll;
+  position: relative;
+  padding-right: 10px;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #ffffff;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #dadee8;
+    border-radius: 4px;
+  }
+}
+
+.listTitle {
+  display: flex;
+}
+
+.listAmount {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  margin-left: 10px;
+  margin-top: 2px;
+}
+
+.button {
+  border: none;
+  box-shadow: none;
+  background: none;
+  width: 36px;
+  height: 36px;
+  svg {
+    fill: #5c5f62;
+  }
+}
+
+.emptyMessage {
+  margin: 20px 0;
+}

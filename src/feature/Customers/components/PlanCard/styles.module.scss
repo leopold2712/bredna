@@ -1,0 +1,35 @@
+.planCard {
+  display: flex;
+  font-family: SF Pro Display;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.infoTitle {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.infoValue {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-left: 10px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  flex: 1.5;
+
+  .infoValue {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}

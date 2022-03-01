@@ -1,0 +1,155 @@
+@import 'src/assets/styles/_mixins';
+
+$zero_color: black;
+$up_color: #007f5f;
+$down_color: #d72c0d;
+$cardTextS_color: #596172;
+
+.layout {
+  &Cnt {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    grid-template-rows: 5rem minmax(100px, auto) minmax(100px, auto);
+    grid-gap: 2rem;
+  }
+
+  &Ws {
+    @media (max-width: 1065px) {
+      grid-column: 1/6;
+      grid-row: 1/4;
+    }
+    @media (min-width: 1065px) {
+      grid-column: 3/6;
+      grid-row: 1;
+    }
+  }
+
+  &Ns {
+    @media (max-width: 1065px) {
+      grid-column: 1/6;
+      grid-row: 4;
+    }
+    @media (min-width: 1065px) {
+      grid-column: 1/3;
+      grid-row: 1/3;
+    }
+  }
+
+  &Lm {
+    @media (max-width: 1065px) {
+      grid-column: 1/6;
+      grid-row: 5;
+    }
+    @media (min-width: 1065px) {
+      grid-column: 1/3;
+      grid-row: 3;
+    }
+  }
+}
+
+.subHeaderContainer {
+  position: relative;
+  height: 4rem;
+}
+
+.header {
+  @media (max-width: 490px) {
+    margin-left: 13px;
+  }
+  display: flex;
+  justify-content: space-between;
+
+  span.title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  span.subTitle {
+    font-size: 14px;
+  }
+
+  @media (max-width: 490px) {
+    :nth-child(2) {
+      margin-right: 5px;
+    }
+  }
+}
+
+.cardHeader {
+  font-size: 16px;
+  font-weight: 600;
+
+  &_underline {
+    border-bottom: 2px dotted #c1c8d7;
+  }
+}
+
+.cardCounter {
+  font-size: 24px;
+  font-weight: 700;
+
+  &_zero {
+    font-weight: 400;
+    color: $zero_color;
+  }
+
+  &_up {
+    font-weight: 400;
+    color: $up_color;
+  }
+
+  &_down {
+    font-weight: 400;
+    color: $down_color;
+  }
+}
+
+.cardTextS {
+  font-size: 12px;
+  font-weight: 400;
+  color: $cardTextS_color;
+}
+
+.cardTextL {
+  font-size: 24px;
+  font-weight: 400;
+  & span {
+    font-size: 24px;
+    font-weight: 400;
+  }
+}
+
+.acHeight {
+  height: 64px;
+}
+.gorHeight {
+  height: 66px;
+}
+.rcHeight {
+  height: 54px;
+}
+
+.cardHeaderS {
+  font-size: 14px;
+  font-weight: 500;
+
+  & span {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.cardCounterS {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.newTotal {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.loaderWrapper {
+  position: relative;
+  padding: 30px;
+}

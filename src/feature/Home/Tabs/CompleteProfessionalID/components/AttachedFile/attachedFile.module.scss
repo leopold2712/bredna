@@ -1,0 +1,18 @@
+.attachedFile {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+
+  &__nameContainer {
+    display: flex;
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    transform: rotate(45deg);
+  }
+}

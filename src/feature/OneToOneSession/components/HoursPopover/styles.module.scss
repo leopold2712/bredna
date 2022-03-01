@@ -1,0 +1,23 @@
+.wrapper {
+  border-radius: 0.8rem;
+  box-shadow: 0px 2px 10px 0px #0000001a;
+  box-shadow: 0px 0px 2px 0px #00000033;
+  padding: 1.6rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+
+  button {
+    background: none;
+    padding: 1rem 0.8rem;
+    border: none;
+    text-align: start;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover {
+      background: #f6f6f7;
+    }
+    &.button--selected {
+      background: #ddf6eb;
+    }
+  }
+}

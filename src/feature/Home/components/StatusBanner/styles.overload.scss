@@ -1,0 +1,25 @@
+.status-banner__wrapper {
+  padding-bottom: 20px;
+
+  .Polaris-Banner--statusInfo {
+    background: #e8f5ff;
+    --p-banner-border: none;
+    border: 1px solid #248ad3;
+
+    a {
+      color: #248ad3;
+      &:hover {
+        color: #0677c7;
+      }
+    }
+
+    .Polaris-Banner__Ribbon {
+      svg {
+        fill: #248ad3 !important;
+      }
+    }
+  }
+}
+.status-banner__inactive-info {
+  margin-bottom: 20px;
+}

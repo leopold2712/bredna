@@ -1,0 +1,152 @@
+.divider {
+  margin-top: 15px;
+  border-bottom: 1px solid #dfe3e8;
+  height: 1px;
+  width: 100%;
+}
+
+.availabilityModalContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  &__subContainer {
+    align-items: center;
+    border-bottom: 1px solid #dfe3e8;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.6rem;
+    width: 100%;
+  }
+  &__scrollableContainer {
+    padding: 1.6rem;
+    height: 100%;
+    flex: 1;
+    &__header {
+      margin-top: 14px;
+    }
+  }
+}
+
+.availabilitySection {
+  margin-top: 14px;
+
+  &__subSection {
+    flex: 1;
+  }
+
+  .endsAfter,
+  .endsOn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .endsOnDate {
+    width: 212px;
+  }
+  .afterSelectWrapper {
+    display: flex;
+    align-items: center;
+    width: 212px;
+    div,
+    p {
+      flex: 1;
+      max-width: 103.33px;
+    }
+    p {
+      padding-left: 18px;
+    }
+  }
+}
+
+.dateActivator {
+  height: 38px;
+  display: flex;
+}
+
+.addHourButton {
+  margin-top: 24px;
+}
+
+.listStyle {
+  list-style-position: inside;
+}
+
+.timeZoneSpan {
+  position: relative;
+  left: -10px;
+}
+
+.footer {
+  display: flex;
+  padding: 1.5rem;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.footerMobile {
+  padding: 2.1rem;
+  box-shadow: 0px -4px 50px 10px rgba(90, 90, 90, 0.25);
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.buttonWrapper {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  .deleteSlot {
+    flex: 1;
+  }
+  @media (max-width: 600px) {
+    margin: 0;
+  }
+}
+.componentLabel {
+  margin-bottom: 0.4rem;
+}
+.repeatLabel {
+  margin-bottom: 1.5rem;
+}
+h1.header {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 600;
+  margin-top: 14px;
+}
+
+.repeatEveryWrapper {
+  display: flex;
+  align-items: center;
+  .repeatHeading {
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .repeatSection {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-right: 45px;
+  }
+  .repeatSelects {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div {
+      flex: 1;
+      &:first-child {
+        margin-right: 10px;
+      }
+      div {
+        margin: 0 !important;
+      }
+    }
+  }
+}

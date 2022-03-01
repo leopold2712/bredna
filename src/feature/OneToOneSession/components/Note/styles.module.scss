@@ -1,0 +1,19 @@
+.note {
+  margin-top: 1rem;
+  &:first-child {
+    margin-top: 0;
+  }
+  .body {
+    padding: 1rem;
+    background: #dadee8;
+    border-radius: 3px;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+  }
+  .header {
+    color: #949fb7;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    display: flex;
+  }
+}

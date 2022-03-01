@@ -1,0 +1,10 @@
+.editNote {
+  &__title {
+    font-size: 1.1em;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

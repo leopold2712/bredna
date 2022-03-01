@@ -1,0 +1,60 @@
+.slotBorder,
+.availableSlotBorder,
+.temporarySlot {
+  border-color: #596172;
+  border-left-width: 3px;
+  border-radius: 4px;
+  padding-left: 5px;
+}
+.slotBorder,
+.temporarySlot {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+}
+
+.temporarySlot {
+  border-color: #c6cfe1;
+}
+
+.availableSlotBorder {
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .liveSessionContainer {
+    td.fc-timegrid-slot {
+      height: 2.2rem !important;
+    }
+  }
+}
+
+.live-sessions__overload {
+  height: calc(100vh - 72px - 56px - 40px);
+  overflow: hidden;
+  .fc-timegrid-event {
+    margin: 0;
+    transform: translateX(-1px) !important;
+  }
+
+  thead {
+    .fc-scroller {
+      overflow-y: hidden !important;
+    }
+  }
+}
+
+.fc-timegrid-now-indicator-line {
+  &::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #ff0000;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+}

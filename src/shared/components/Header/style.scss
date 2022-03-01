@@ -1,0 +1,103 @@
+@import 'src/assets/styles/_colors';
+.app {
+  &__header {
+    background-color: $header-bg;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo__wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 20px;
+      margin-right: 12px;
+      cursor: pointer;
+
+      @media (max-width: 500px) {
+        display: none;
+      }
+
+      &_fixed-bar {
+        @media (max-width: 500px) {
+          display: none;
+        }
+      }
+    }
+    &__left-wrapper {
+      display: flex;
+      @media (max-width: 650px) {
+        flex: 1;
+      }
+    }
+  }
+
+  &__header-txt {
+    color: #fff;
+    line-height: 20px;
+    flex: 1;
+    padding-left: 120px;
+
+    @media (max-width: 500px) {
+      padding-left: 0;
+    }
+  }
+}
+
+.headerMenuHub {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.headerUserInfo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  > div:first-child {
+    margin-right: 5px;
+  }
+  .Polaris-TopBar-Menu__Activator {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    padding-left: 0.8rem;
+    margin-top: 0px;
+    margin-right: 0.2rem;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+  @media (max-width: 768px) {
+    width: 84px;
+  }
+}
+
+.button__tranparent {
+  background: none;
+  border: 1px solid #e9ecf2;
+  border-radius: 3px;
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+.fixed-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+
+  .buttons-group {
+    display: flex;
+  }
+}
+
+.Polaris-Frame-Loading__Level {
+  background: $primary !important;
+}
+
+.header__hidden-items {
+  display: block;
+  height: 56px;
+}

@@ -1,0 +1,27 @@
+@import 'src/assets/styles/_colors';
+
+.clients {
+  &__filters-overload {
+    padding-bottom: 1rem;
+    .Polaris-Filters-ConnectedFilterControl__CenterContainer {
+      max-width: 404px !important;
+    }
+  }
+  &__avatar-overload {
+    .Polaris-Avatar--styleOne {
+      background: $primary;
+    }
+    .Polaris-Avatar__Svg {
+      background: $primary;
+      border: none;
+    }
+  }
+  &__resource-list-overload {
+    .Polaris-ResourceItem__Owned {
+      align-self: center;
+      @media (max-width: 1200px) {
+        align-self: flex-start;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+$mobile-max-width: 1050px;
+
+.homeWizard {
+  &__header {
+    background-color: #fff;
+    .title {
+      padding: 1.6rem 0 4rem 0;
+      @media (max-width: $mobile-max-width) {
+        padding: 0 0 1.8rem !important;
+      }
+      text-align: center;
+
+      .titleText {
+        @media (max-width: $mobile-max-width) {
+          font-size: 18px !important;
+          font-weight: 600 !important;
+        }
+      }
+    }
+    .dividerCnt {
+      width: 100%;
+
+      .divider {
+        width: 90%;
+        margin: 0 auto;
+        height: 1px;
+        border-bottom: 1px solid #dfe3e8;
+      }
+    }
+  }
+}

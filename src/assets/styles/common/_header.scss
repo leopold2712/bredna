@@ -1,0 +1,141 @@
+.b_header {
+
+  .link_logo{
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .logo {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 32px;
+      color: #949FB7;
+      margin: 0 auto;
+      max-width: 1100px;
+  }
+
+  &.sign{
+    .logo_wrapper{
+      padding: 30px 30px;
+
+      @media(max-width: $screen-xs-max) {
+        padding: 60px 20px 35px;
+        text-align: center;
+      }
+      background: #ffffff;
+    }
+    background: #ffffff;
+
+    .link_logo{
+      @media(max-width: $screen-xs-max) {
+        max-width: 110px;
+      }
+    }
+  }
+
+  &.dashboard{
+    background-color: #000000;
+    padding: 8px;
+  }
+
+  .header_wrapper{
+    align-items: center;
+  }
+
+  .right_control{
+    width: 180px;
+    text-align: right;
+
+    .dropdown_menu_wrapper{
+      right: 0;
+      min-width: 157px;
+    }
+  }
+
+  .user_btn_control{
+    display: inline-block;
+    vertical-align: middle;
+    color: #FFFFFF;
+
+    &:hover{
+      .user_image_wrapper{
+        background: rgba(255, 255, 255, 0.3);
+      }
+    }
+    
+    .user_name{
+      display: inline-block;
+      vertical-align: middle;
+      width: calc(100% - 48px);
+      padding: 0 9px 0 0;
+    }
+
+    .user_image_wrapper{
+      width: 48px;
+      display: inline-block;
+      vertical-align: middle;
+      border-radius: 3px;
+      padding: 4px 8px;
+      transition: all .2s linear;
+      position: relative;
+      
+    }
+
+    .user_image_block_bg{
+      display: block;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(96.13deg, #49E3D7 5.03%, #42CEA9 100.33%);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .user_image{
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .initials{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      font-size: 18px;
+    }
+  }
+
+
+
+  .left_control{
+    width: calc(100% - 180px);
+  }
+
+  .logo_link{
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .dropdown_store{
+    .dropdown_menu_wrapper{
+      width: 256px;
+    }
+  }
+
+  .new_btn_wrapper{
+    padding: 9px 20px;
+  }
+}
+

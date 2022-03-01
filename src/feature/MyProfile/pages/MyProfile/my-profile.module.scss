@@ -1,0 +1,164 @@
+.myProfile {
+  &__saveButtonContainer {
+    padding: 2rem 0 0;
+    @media (max-width: 768px) {
+      padding: 0 2rem 0;
+      margin-top: 20px;
+      margin-left: 5px;
+    }
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  &__addNewHub {
+    display: flex;
+    justify-content: flex-end;
+    padding: 23px 20px;
+  }
+
+  &__hub {
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__emailLabel {
+    font-size: 1.4rem;
+    width: 100%;
+  }
+
+  &__textFields {
+    > div {
+      margin-top: 10px;
+    }
+
+    &__textFieldsWithImage {
+      margin-top: 55px;
+    }
+  }
+
+  &__educationsEditButton {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__educationsEditButtonContainer {
+    margin-top: 10px;
+  }
+
+  &__educationActionButtons {
+    display: flex;
+    justify-content: space-between;
+    button {
+      width: 88px;
+      background: linear-gradient(180deg, #fafbfc 0%, #ebeff2 100%);
+      border: 1px solid #c4cdd5;
+      box-sizing: border-box;
+      box-shadow: 0px 1px 0px rgba(22, 29, 37, 0.05);
+      border-radius: 3px;
+    }
+    button:nth-child(1) {
+      margin-right: 5px;
+      background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%) !important;
+      &:hover {
+        border: 1px solid #c4cdd5;
+      }
+    }
+  }
+
+  &__educationsBlock {
+    margin-top: 10px;
+  }
+
+  &__educationContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__educationSubContainer {
+    width: 48%;
+  }
+
+  &__skillsPopoverContainer {
+    div + div {
+      margin-top: 10px;
+    }
+  }
+
+  &__selectedSkillsContainer {
+    margin-top: 10px;
+  }
+
+  &__languagesContainer {
+    div + div {
+      margin-top: 10px;
+    }
+  }
+
+  &__selectedLanguagesContainer {
+    margin-top: 10px;
+  }
+
+  &__experienceSelectContainer {
+    @media (max-width: 768px) {
+      width: 35%;
+    }
+    @media (min-width: 768px) {
+      width: 30%;
+    }
+  }
+
+  &__educationsDates {
+    font-family: Mulish, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__aboutMeContainer {
+    margin-top: 20px;
+  }
+
+  &__aboutMeText {
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__aboutMeTextCounter {
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #949fb7;
+  }
+}
+
+.divider {
+  border-top: 0.1rem solid var(--p-divider);
+  height: 0.1rem;
+  margin-top: 20px;
+}
+.copyLinkButton {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.profilePicture {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  max-height: 200px;
+}
+
+.dropZoneWrapper {
+  width: 165px !important;
+}

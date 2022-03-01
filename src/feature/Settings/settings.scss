@@ -1,0 +1,78 @@
+.settings {
+  &__button-wrapper {
+    .Polaris-Button {
+      background: linear-gradient(180deg, #fafbfc 0%, #ebeff2 100%);
+      border: 1px solid #c4cdd5;
+      box-shadow: 0px 1px 0px 0px #161d25 5%;
+    }
+  }
+
+  &__save-button {
+    padding: 20px 0;
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width: 1280px) {
+      padding: 20px 20px 0;
+    }
+  }
+}
+
+.hub-item {
+  &__wrapper {
+    background-color: white;
+    margin-bottom: 10px;
+    @media (max-width: 1280px) {
+      margin-bottom: 1px;
+    }
+    box-shadow: 0px 0px 0px rgba(63, 63, 68, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);
+    border-radius: 3px;
+  }
+
+  &__content {
+    display: flex;
+    padding: 10px 60px 0 0px;
+    flex-direction: column;
+    padding: 0;
+    justify-content: space-between;
+    position: relative;
+    .status-icon {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+  }
+
+  &__badge {
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(96.13deg, #49e3d7 5.03%, #42cea9 100.33%);
+    border-radius: 4px;
+    margin: -20px 0 0 5px;
+  }
+
+  &__tag {
+    text-align: center;
+    font-weight: 600;
+    width: 26px;
+    height: 20px;
+    background: linear-gradient(96.13deg, #fde082 5.03%, #ffd98e 100.33%);
+    border-radius: 10px;
+  }
+
+  &__line {
+    max-width: 75vw;
+    width: 75vw;
+    @media (min-width: 1280px) {
+      max-width: 300px;
+      width: 300px;
+    }
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

@@ -1,0 +1,49 @@
+.noticeContainer {
+  padding: 2rem;
+
+  div.Polaris-Label label {
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__subContainer {
+    margin-top: 15px;
+
+    &__block {
+      margin-top: 10px;
+    }
+
+    &__fileHeader {
+      font-family: SF Pro Text;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__prompt {
+    font-size: 12px;
+  }
+}
+
+.sendButtonContainer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+
+  &__button {
+    margin-left: auto;
+  }
+}
+
+.noticeSubsectionHeader {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}

@@ -1,0 +1,78 @@
+@import 'src/assets/styles/_mixins';
+
+.congrats {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #fff;
+
+  .main {
+    flex: 1;
+  }
+}
+
+.brendaLogo {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #949fb7;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.message {
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .messageText {
+    font-size: 36px;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  body {
+    background-color: #fff;
+  }
+
+  .main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .page {
+    margin-top: 0 !important;
+  }
+
+  .formWrapper {
+    background-color: #fff !important;
+    padding: 80px 0px 0px !important;
+  }
+
+  .spinnerWrapper {
+    margin-top: 190px !important;
+  }
+
+  .message {
+    height: 100px;
+
+    .messageText {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 3rem;
+    }
+  }
+
+  .pageFooter {
+    height: 72px;
+    width: 100vw;
+    padding: 24px 0 20px !important;
+    background-color: #f4f6f8;
+  }
+}

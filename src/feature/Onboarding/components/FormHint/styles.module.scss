@@ -1,0 +1,15 @@
+@import 'src/assets/styles/_mixins';
+
+.hint {
+  margin-bottom: 30px;
+  p.text {
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}

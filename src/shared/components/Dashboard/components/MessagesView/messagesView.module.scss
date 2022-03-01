@@ -1,0 +1,97 @@
+.item {
+  display: flex;
+  align-items: flex-start;
+
+  .avatar {
+    flex: 1;
+  }
+
+  .infoCnt {
+    flex: 8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .info {
+      flex: 9;
+      display: flex;
+      flex-direction: column;
+
+      .fullName {
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      .description {
+        font-size: 14px;
+        font-weight: 300;
+        color: #949fb7;
+      }
+    }
+
+    .counterCnt {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+
+      .counter {
+        font-size: 11px;
+        font-weight: 400;
+        height: 19px;
+        width: 19px;
+        background: linear-gradient(96.13deg, #49e3d7 5.03%, #42cea9 100.33%);
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.leftBlock {
+  display: flex;
+  align-items: center;
+  height: 6rem;
+  @media (max-width: 1065px) {
+    flex-direction: column;
+    align-items: unset;
+    height: 10rem;
+  }
+
+  .blockInfo {
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+
+    .blockTitle {
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .blockText {
+      font-size: 12px;
+      font-weight: 300;
+      color: #949fb7;
+    }
+  }
+
+  .blockBtnCnt {
+    flex: 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+
+    .blockBtn {
+      button {
+        background: linear-gradient(180deg, #FAFBFC 0%, #EBEFF2 100%);
+        border: 1px solid #C4CDD5;
+        box-sizing: border-box;
+        box-shadow: 0px 1px 0px rgba(22, 29, 37, 0.05);
+        border-radius: 3px;
+        width: 149px;
+      }
+    }
+  }
+}

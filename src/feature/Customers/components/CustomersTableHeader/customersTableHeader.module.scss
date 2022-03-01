@@ -1,0 +1,59 @@
+.wrapper {
+  display: flex;
+  padding: 20px 20px 10px;
+  .cell {
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    @media (max-width: 1395px) {
+      font-size: 13.5px;
+    }
+    @media (max-width: 1258px) {
+      font-size: 12.8px;
+    }
+    @media (max-width: 1213px) {
+      font-size: 12.4px;
+    }
+    @media (min-width: 1398px) {
+      font-size: 16px;
+    }
+    color: #000000;
+    font-weight: 600;
+    &:first-child {
+      justify-content: flex-start;
+      margin-left: 60px;
+      // @media (max-width: 1395px) {
+      //   flex: 2.5;
+      // }
+      // @media (max-width: 1600px) {
+      //   flex: 2.55;
+      // }
+      // @media (min-width: 1600px) {
+      //   flex: 2.38;
+      // }
+    }
+    &:nth-child(2) {
+      flex: 2;
+    }
+    &:nth-child(3) {
+      flex: 1.2;
+    }
+    &:nth-child(4) {
+      flex: 1.2;
+    }
+    &:nth-child(5) {
+      flex: 1.4;
+    }
+    &:nth-child(6) {
+      flex: 1.4;
+    }
+    &:last-child {
+      flex: 1;
+    }
+  }
+}

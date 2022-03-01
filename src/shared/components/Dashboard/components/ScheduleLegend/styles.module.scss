@@ -1,0 +1,35 @@
+.legend {
+  display: flex;
+  padding-bottom: 1.5rem;
+  width: 100%;
+
+  .legendItem {
+    display: flex;
+    align-items: center;
+
+    &:first-child {
+      margin-right: 17px;
+    }
+
+    .legendPoint {
+      height: 9px;
+      width: 9px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+
+    .vacantColor {
+      background-color: #bfe4f8;
+    }
+
+    .bookedColor {
+      background-color: #248ad3;
+    }
+
+    .legendText {
+      font-size: 15px;
+      font-weight: 400;
+      color: #8a9ea8;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.fileViewWithoutCaption {
+  div.file-view__caption {
+    display: none;
+  }
+}
+.aboutSection--overload {
+  div.Polaris-FormLayout__Item:last-child {
+    margin-top: 0.5rem;
+  }
+  div.Polaris-FormLayout--grouped {
+    div.Polaris-FormLayout__Item:last-child {
+      margin-top: 1.6rem;
+    }
+  }
+}
+
+.labels {
+  label.Polaris-Label__Text {
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

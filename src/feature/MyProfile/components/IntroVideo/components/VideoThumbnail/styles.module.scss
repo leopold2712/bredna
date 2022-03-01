@@ -1,0 +1,30 @@
+.thumbnailWrapper {
+  padding: 20px 0;
+  position: relative;
+  h1 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #202223;
+    margin-bottom: 5px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.buttons {
+  padding-top: 14px;
+}
+
+.thumbnailImg {
+  margin-top: 10px;
+  max-width: 495px;
+  @media (max-width: 550px) {
+    max-width: 340px;
+  }
+  @media (max-width: 320px) {
+    max-width: 240px;
+  }
+}

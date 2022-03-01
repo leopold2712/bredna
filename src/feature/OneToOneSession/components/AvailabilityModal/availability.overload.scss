@@ -1,0 +1,11 @@
+@import 'src/assets/styles/_colors.scss';
+
+.radioButtons {
+  .Polaris-RadioButton__Input:checked + .Polaris-RadioButton__Backdrop {
+    border-color: $primary-one-color;
+  }
+
+  span.Polaris-RadioButton__Backdrop::before {
+    background-color: $primary-one-color;
+  }
+}

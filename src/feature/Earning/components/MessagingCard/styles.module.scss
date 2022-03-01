@@ -1,0 +1,23 @@
+.messaging_total {
+  &__item {
+    text-align: center;
+    padding: 31px 24px;
+    background-color: #fff;
+    margin-right: 20px;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    background: -webkit-linear-gradient(#59a0d3, #7babd7, #BFE4F8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

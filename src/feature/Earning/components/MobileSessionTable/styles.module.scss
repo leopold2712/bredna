@@ -1,0 +1,35 @@
+$color: rgba(193, 200, 215, 0.55);
+
+.mobile_header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 40px;
+  background: $color;
+  padding: 0 20px;
+}
+
+.mobile_table {
+  background: #fff;
+  font-size: 16px;
+  line-height: 19px;
+
+  &__card {
+    padding: 20px;
+    border-bottom: 2px solid $color;
+  }
+
+  &__container {
+    display: grid;
+    grid-gap: 10px;
+    padding: 10px 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+  }
+}

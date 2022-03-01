@@ -1,0 +1,19 @@
+.certificate-drop-zone {
+  font-size: 1.1em;
+
+  .Polaris-DropZone--hasOutline {
+    padding: 0;
+    height: 114px;
+    width: 114px;
+  }
+
+  .file-upload-with-content {
+    .Polaris-DropZone-FileUpload {
+      .Polaris-Stack--vertical {
+        .Polaris-Stack__Item:last-child::after {
+          content: none;
+        }
+      }
+    }
+  }
+}

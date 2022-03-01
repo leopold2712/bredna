@@ -1,0 +1,90 @@
+.chart {
+  margin-bottom: 20px;
+  position: relative;
+
+  &__title {
+    font-weight: 600;
+    font-size: 16px;
+    color: #212B36;
+    border-bottom: 2px dashed #C1C8D7;
+    display: inline-block;
+    margin-bottom: 6px;
+    position: relative;
+
+    &:hover {
+      .chart__desciption {
+        display: block;
+      }
+    }
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  &__total {
+    font-size: 24px;
+  }
+
+  &__percent {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+
+    &_positive {
+      color: #49E3D7;
+    }
+
+    &_negative {
+      color: #F40789;
+    }
+
+    svg {
+      fill: currentColor;
+    }
+  }
+
+  &__percent-icon {
+    margin-right: 9px;
+
+    &_positive {
+      color: #49E3D7;
+    }
+
+    &_negative {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  &__desciption {
+    background: #fff;
+    box-shadow: 0px 0px 0px 1px rgba(63, 63, 68, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);
+    border-radius: 3px;
+    color: #637381;
+    font-size: 14px;
+    padding: 20px 12px;
+    width: 230px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    font-weight: normal;
+    display: none;
+    z-index: 1000;
+  }
+}

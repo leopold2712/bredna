@@ -1,0 +1,59 @@
+@import 'src/assets/styles/_mixins';
+
+.certificateForm {
+  border-bottom: 1px solid #dfe3e8;
+  padding-bottom: 2rem;
+}
+
+.certificateContainer {
+  display: flex;
+  margin-top: 1.5rem;
+
+  @media (max-width: $screen-phone) {
+    flex-direction: column;
+  }
+}
+
+.certificateSubContainer {
+  flex: 16;
+}
+
+.attachedFilesContainer {
+  flex: 84;
+  margin-left: 1.5rem;
+
+  @media (max-width: $screen-phone) {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .attachedFilesSubContainer {
+    height: 100%;
+  }
+}
+
+.certificatesActionsContainer {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+
+  &__subcontainer {
+    display: flex;
+  }
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: space-between;
+  button {
+    width: 8.8rem;
+    background: linear-gradient(180deg, #fafbfc 0%, #ebeff2 100%);
+    border: 1px solid #c4cdd5;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 0px rgba(22, 29, 37, 0.05);
+    border-radius: 3px;
+  }
+  button:nth-child(1) {
+    margin-right: 0.5rem;
+  }
+}

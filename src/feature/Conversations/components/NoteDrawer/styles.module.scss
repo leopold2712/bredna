@@ -1,0 +1,104 @@
+button.action {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.card {
+  width: 285px;
+  height: calc(100vh - 160px);
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 500;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 2px 16px rgba(33, 43, 54, 0.08);
+  max-height: calc(100vh - 160px);
+  overflow: hidden;
+  @media (max-width: 700px) {
+    height: calc(100vh - 135px);
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.8rem 2rem;
+    border-bottom: 1px solid #dfe3e8;
+    p {
+      font-weight: 600px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
+.section {
+  padding: 2rem;
+  border-bottom: 1px solid #dfe3e8;
+  position: relative;
+  &:last-child {
+    border-bottom: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 1rem 0;
+    font-size: revert;
+    font-weight: revert;
+    width: 100%;
+  }
+  ol {
+    margin-left: 16px;
+  }
+}
+
+.subtitle {
+  color: #596172;
+}
+
+.modalTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #212b36;
+}
+.notesAmount {
+  position: absolute;
+  transform: translateX(-2rem) translateY(-3.2rem);
+  font-size: 12px;
+  font-weight: 300;
+  color: #949fb7;
+  background: #fff;
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+
+.inputWrapper {
+  border-top: 1px solid #f4f6f8;
+  padding-top: 2rem;
+  input {
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    padding: 1rem;
+    background: #f1f2f3;
+    outline: none;
+  }
+  .button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1rem;
+  }
+}
+.scrollable {
+  max-height: calc(100vh - 340px);
+  overflow: auto;
+}
+.topPaddingZero {
+  padding-top: 0;
+}

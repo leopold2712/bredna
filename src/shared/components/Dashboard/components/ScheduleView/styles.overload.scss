@@ -1,0 +1,71 @@
+.homepage__calendar-overload {
+  position: relative;
+  height: calc(100vh - 420px); /* 420px - another page content height */
+  overflow: hidden;
+
+  thead {
+    .fc-scroller {
+      overflow-y: hidden !important;
+    }
+  }
+
+  td {
+    height: 38px !important;
+  }
+
+  .availableSlotBorder {
+    border: none !important;
+    border-radius: 0 !important;
+  }
+
+  .fc-timegrid-event {
+    padding: 0 !important;
+  }
+
+  .fc-event-main {
+    padding: 0;
+  }
+
+  .fc-timegrid-event-harness {
+    box-sizing: border-box;
+    margin-right: 0 !important;
+    transform: translateX(-1px) scaleX(1.1);
+  }
+
+  .fc-media-screen .fc-timegrid-event {
+    bottom: 0 !important;
+  }
+
+  .fc-v-event {
+    border: none;
+  }
+
+  .fc-timegrid-slot-label-frame {
+    text-align: center;
+  }
+
+  .fc-timegrid-col-frame {
+    background: #fafafa;
+  }
+
+  .schedule--availableSlotBorder {
+    border-radius: 0;
+    border: none;
+  }
+
+  .fc-timegrid-event-harness-inset .fc-timegrid-event,
+  .fc-timegrid-event.fc-event-mirror {
+    box-shadow: none !important;
+  }
+  .schedule--slotBorder {
+    border-radius: 0;
+  }
+}
+p.calendar__time-header {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 11.3571px;
+  line-height: 44px;
+  color: #596172;
+}

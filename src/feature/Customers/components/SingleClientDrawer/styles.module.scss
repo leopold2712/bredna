@@ -1,0 +1,49 @@
+.wrapperMobile {
+  padding: 20px;
+}
+
+.closeButton {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+}
+
+.cardBody {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  .avatar {
+    width: 46px;
+    height: 46px;
+    margin-right: 10px;
+  }
+
+  .clientName {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+  }
+}
+
+.emergencyContact {
+  padding-top: 20px;
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+}

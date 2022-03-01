@@ -1,0 +1,14 @@
+.tags {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+  &__wrapper {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,41 @@
+.file-dropzone {
+  &__files-wrapper {
+    margin-top: 2rem;
+  }
+  &__text {
+    color: #006fbb;
+    font-size: 14px;
+    text-decoration: underline;
+  }
+  &__text-disabled {
+    color: #8c9196;
+    font-size: 14px;
+  }
+  &__subtitle {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #6d7175;
+  }
+  &__attached-title {
+    color: #000000;
+    margin: 0 !important;
+  }
+  &__file-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    .file {
+      &__title {
+        flex: 1;
+        padding-left: 5;
+      }
+      &__button {
+        background-color: #fff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+    }
+  }
+}

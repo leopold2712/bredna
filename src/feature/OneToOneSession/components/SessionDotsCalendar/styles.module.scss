@@ -1,0 +1,30 @@
+.dots {
+  position: absolute;
+  left: 50%;
+  bottom: -40%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dotsWithLabel {
+  bottom: -75%;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 2.5px;
+  display: inline-block;
+  content: '';
+  background: linear-gradient(96.13deg, #49e3d7 5.03%, #42cea9 100.33%);
+
+  margin: 0 2px;
+}
+
+.dotLabel {
+  font-size: 10px;
+  color: #65d1b4;
+  font-weight: 600;
+}

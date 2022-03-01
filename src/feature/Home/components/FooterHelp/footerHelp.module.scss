@@ -1,0 +1,20 @@
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .logoText {
+    padding-right: 4px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  img {
+    width: 100px;
+  }
+}
+.footerRules {
+  font-size: 12px;
+  color: #757e91;
+  text-align: center;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+}

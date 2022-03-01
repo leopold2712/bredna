@@ -1,0 +1,149 @@
+$lineColor: #dadee8;
+
+.node {
+  width: 100%;
+  display: flex;
+  border-left: 1px solid $lineColor;
+
+  &__line {
+    position: relative;
+    height: 100%;
+    bottom: 0;
+    border-left: 1px solid $lineColor;
+  }
+
+  &__img {
+    position: absolute;
+    top: calc(50% - 12px);
+    left: -0.8rem;
+    background: #fff;
+  }
+
+  &__titleCnt {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &__title,
+  &__titleTime {
+    width: 95%;
+  }
+
+  &__titleTime {
+    color: #949fb7;
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+
+.childNode {
+  width: 100%;
+  display: flex;
+  border-left: 1px solid $lineColor;
+
+  &__line {
+    height: 100%;
+    border-left: 1px solid $lineColor;
+  }
+
+  &__indent {
+    flex: 1.5;
+    position: relative;
+    height: 100%;
+  }
+
+  &__indentIn {
+    position: absolute;
+    height: 85%;
+    width: 100%;
+    border-top: 1px solid #dadee8;
+    top: 10px;
+    left: -2px;
+  }
+
+  &__indentImg {
+    position: absolute;
+    top: -0.8rem;
+    right: 0;
+  }
+
+  &__titleCnt {
+    flex: 30;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+    word-break: break-all;
+    ul {
+      padding-left: 16px;
+    }
+  }
+
+  &__title,
+  &__titleTime {
+    width: 98%;
+  }
+
+  &__title {
+    border: none;
+    border-bottom: 1px solid #949fb7;
+    padding: 3px;
+    padding-left: 0;
+    outline: none;
+    background: none;
+
+    &:disabled {
+      color: #212b36;
+      border-bottom: 1px solid rgba(255, 255, 255, 0);
+    }
+  }
+
+  &__titleTime {
+    color: #949fb7;
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+
+.seeMoreLess {
+  color: #949fb7;
+}
+
+.nodeInputBottom {
+  .node__img {
+    top: 0;
+    left: -0.8rem;
+  }
+}
+
+.narrowNode {
+  .childNode__indent {
+    flex: 7.5;
+  }
+  .childNode__titleCnt {
+    padding-left: 8px;
+  }
+  .journeyTitle {
+    justify-content: flex-start;
+    padding-left: 26px;
+    transform: translateY(-8px);
+  }
+}
+
+.editButton {
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: #949fb7;
+  cursor: pointer;
+  span {
+    border-bottom: 1px solid #949fb7;
+  }
+}

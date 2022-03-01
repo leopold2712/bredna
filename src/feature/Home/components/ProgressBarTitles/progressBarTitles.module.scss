@@ -1,0 +1,27 @@
+@import 'src/assets/styles/_colors';
+
+$mobile-max-width: 1050px;
+
+.progressTitle {
+  &__wrapper {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    color: #c1c8d7;
+    font-size: 16px;
+
+    @media (max-width: $mobile-max-width) {
+      font-size: 14px !important;
+      font-weight: 400 !important;
+      width: 80px !important;
+      text-align: center !important;
+    }
+
+    &.active {
+      color: $primary-one-color;
+    }
+  }
+}

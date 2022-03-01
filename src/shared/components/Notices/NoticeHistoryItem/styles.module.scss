@@ -1,0 +1,41 @@
+.wrapper {
+  h1 {
+    font-family: SF Pro Text;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  p {
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #919eab;
+    margin: 10px 0;
+  }
+}
+
+.button {
+  width: 100%;
+  text-align: right;
+  color: #006fbb;
+}
+
+.divider {
+  margin: 10px 0;
+  border-bottom: 1px solid #dfe3e8;
+  height: 1px;
+  width: 100%;
+}
+
+.date {
+  p {
+    margin: 10px 0 0 0;
+    font-weight: normal;
+    font-size: 12px;
+  }
+}

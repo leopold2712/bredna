@@ -1,0 +1,20 @@
+.empty-search {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #fff;
+  }
+  &__heading {
+    color: #212b36;
+    font-size: 18px;
+    line-height: 32px;
+  }
+  &__description {
+    color: #757e91;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}

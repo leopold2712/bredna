@@ -1,0 +1,10 @@
+.wizard-page-overload {
+  .Polaris-Page {
+    max-width: 123rem;
+  }
+
+  .Polaris-Layout__Section,
+  .Polaris-Layout__AnnotatedSection {
+    margin-top: 0 !important;
+  }
+}

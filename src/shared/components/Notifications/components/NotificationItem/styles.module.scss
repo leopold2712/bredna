@@ -1,0 +1,87 @@
+.notificationWrapper {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  border-top: 1px solid #c1c8d7;
+  cursor: pointer;
+  transition: 0.1s ease all;
+  position: relative;
+
+  &:hover {
+    background: #eef6fd;
+  }
+
+  .body {
+    padding-left: 2rem;
+    font-size: 1.6rem;
+    flex: 1;
+    .time {
+      color: #949fb7;
+    }
+  }
+
+  &.unread {
+    background: #dbf0ff;
+  }
+
+  .readButton {
+    position: relative;
+    padding-right: 25px;
+    .button {
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      border: 1px solid #248ad3;
+      cursor: pointer;
+      transition: 0.2 ease all;
+      span.tooltip {
+        position: absolute;
+        border-radius: 4px;
+        width: 115px;
+        display: block;
+        padding: 5px 9px;
+        background: #fff;
+        box-shadow: 0px 2px 10px 0px #0000001a;
+        right: -15px;
+        bottom: -27px;
+        opacity: 0;
+        display: none;
+      }
+      &:hover {
+        span.tooltip {
+          opacity: 1;
+          display: block;
+        }
+      }
+      &.active {
+        background: #248ad3;
+        svg {
+          fill: #fff;
+        }
+
+        &:hover {
+          background: #248ad35d;
+
+          svg {
+            fill: rgba(255, 255, 255, 0.6);
+            display: block;
+          }
+        }
+      }
+      &.inactive {
+        background: none;
+        svg {
+          display: none;
+        }
+        &:hover {
+          background: #248ad35d;
+
+          svg {
+            fill: rgba(255, 255, 255, 0.6);
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

@@ -39,6 +39,7 @@ export const EarningPage: FC = (): JSX.Element => {
         title="Earning"
         subtitle="The money you make with brenda depends on your availabliity and interactions with clients."
       >
+        <div>lol</div>
         <div className={styles.tabs_wrapper}>
           <Tabs tabs={tabs} selected={selected} onSelect={handleTabChange}>
             <div className={styles.tab_wrapper}>{getSelectedTab(selected)}</div>

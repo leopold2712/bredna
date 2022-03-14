@@ -1,0 +1,14 @@
+/.git
+/.vscode
+node_modules
+nodeSDK
+lpAgent
+*.scss
+*.css
+*.png
+*.jpg
+*.svg
+*.ttf
+*.woff
+*.woff2
+*.eot

@@ -60,7 +60,7 @@ export const ConversationCard: React.FC<Props> = ({ room, source }: Props): JSX.
           </div>
         ) : (
           <div className={`${styles.plan} ${styles.plan_expired}`}>
-            <p>Expired Plan</p>
+            <p>Expired Plans</p>
           </div>
         )}
 

@@ -13,17 +13,11 @@
     background-color: #f4f6f8;
   }
   .headerInfo{
-    position: relative;
-    display: flex;
     width: 100%;
-    justify-content: flex-end;
     .plan{
-      position: absolute;;
-      left: 50px;
-      font-size: 14px;
-      
+      float: left;
+      margin-left: 50px;
       &_active{
-        
         p{
           text-align: center;
           color: #2EBA7F;

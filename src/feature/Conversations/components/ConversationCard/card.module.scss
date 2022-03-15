@@ -1,6 +1,6 @@
 .wrapper {
   background: #fff;
-  padding: 15px;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   transition: background-color 450ms ease;
@@ -12,37 +12,94 @@
   &:hover {
     background-color: #f4f6f8;
   }
+  .headerInfo{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    .plan{
+      position: absolute;;
+      left: 50px;
+      font-size: 14px;
+      
+      &_active{
+        
+        p{
+          text-align: center;
+          color: #2EBA7F;
+          font-weight: 500;
+        }
+      }
+      &_expired{
+        p{
+          text-align: center;
+          color: #D82C0D;
+          font-weight: 500;
+        }
+      }
+    }
+    .date {
+      color: #949fb7;
+      font-size: 12px;
+      text-align: right;
+    }
+  }
+  .mainInfo{
+    display: flex;
+    width: 100%;
+    .avatar{
+
+    }
+    .content{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-left: 1rem;
+      width: 100%;
+      position: relative;
+      margin-top: 1rem;
+      .name{
+        color: #212b36;
+        font-size: 14px;
+        font-weight: 400;
+        word-break: break-all;
+        text-align: start;
+      }
+      .message{
+        color: #949fb7;
+        font-weight: 300;
+        text-align: left;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 160px;
+      }
+    }
+    .icons{
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      .unread{
+        width: 18px;
+        height: 18px;
+        background: #248AD3;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        line-height: 16px;
+        color: #FFFFFF;
+      }
+    }
+  }
 }
 
 .active {
   background-color: #f4f6f8;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding-left: 1rem;
-  width: 100%;
-  position: relative;
-}
-.name {
-  color: #212b36;
-  font-size: 14px;
-  font-weight: 600;
-  word-break: break-all;
-  text-align: start;
-}
-.message {
-  color: #949fb7;
-  font-weight: 300;
-  margin-top: 5px;
-  text-align: left;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  max-width: 160px;
 }
 .hubName {
   color: #42cea9;
@@ -50,36 +107,6 @@
   font-weight: 300;
   margin-top: 5px;
 }
-.row {
-  width: 100%;
-  display: flex;
-}
-.date {
-  width: 100%;
-  color: #949fb7;
-  font-size: 12px;
-  text-align: right;
-}
-
-.icons {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  display: flex;
-}
 .flag {
   margin-right: 10px;
-}
-.unread {
-  width: 18px;
-  height: 18px;
-  background: linear-gradient(96.13deg, #49e3d7 5.03%, #42cea9 100.33%);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 12px;
-  line-height: 16px;
-  color: #fff;
 }

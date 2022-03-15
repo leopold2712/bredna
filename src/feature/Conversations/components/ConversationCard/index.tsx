@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 import { ChatService } from '../../services';
 import { useAppDispatch, useAppSelector } from '../../../../main/store/hooks';
-import { selectActiveRoom, selectChatUI } from '../../store/selectors';
+import { selectActiveRoom, selectChatUI, selectClientInfo } from '../../store/selectors';
 import { setActiveRoom, setChatUI, Views } from '../../store';
 import { ChatRoomDTO } from '../../dtos';
 
@@ -36,7 +36,10 @@ export const ConversationCard: React.FC<Props> = ({ room, source }: Props): JSX.
     if (chatUI.mobileView) dispatch(setChatUI({ ...chatUI, activeView: Views.DIALOG }));
   };
 
-  const { id, thumbnail, name, lastMessage, unreadMessages } = room;
+  const { id, thumbnail, name, lastMessage } = room;
+
+  const unreadMessages = 3;
+  const isPaid = Boolean(useAppSelector(selectClientInfo)?.current_plans);
 
   const initials = name[0] + name[name.indexOf(' ') + 1];
 
@@ -50,13 +53,23 @@ export const ConversationCard: React.FC<Props> = ({ room, source }: Props): JSX.
       key={id}
       id={id.toString()}
     >
-      <div className={styles.row}>
+      <div className={styles.headerInfo}>
+        {isPaid ? (
+          <div className={`${styles.plan} ${styles.plan_active}`}>
+            <p>Active Paid Plan</p>
+          </div>
+        ) : (
+          <div className={`${styles.plan} ${styles.plan_expired}`}>
+            <p>Expired Plans</p>
+          </div>
+        )}
+
         {lastMessage && (
           <div className={styles.date}>{moment(lastMessage?.createdAt).format('DD/MM/YYYY')}</div>
         )}
       </div>
 
-      <div className={styles.row}>
+      <div className={styles.mainInfo}>
         <div className={classNames(styles.avatar, 'fs-exclude')}>
           {thumbnail ? <Avatar source={thumbnail} /> : <Avatar initials={initials} />}
         </div>

@@ -7,7 +7,7 @@ button.action {
 
 .card {
   width: 285px;
-  height: calc(100vh - 160px);
+  height: calc(100vh - 225px);
   position: absolute;
   right: 0;
   top: 0;
@@ -15,144 +15,207 @@ button.action {
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 0px 2px 16px rgba(33, 43, 54, 0.08);
-  max-height: calc(100vh - 160px);
+  max-height: calc(100vh - 225px);
   overflow: auto;
   .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 1.8rem 2rem;
     border-bottom: 1px solid #dfe3e8;
-    p {
-      font-weight: 600px;
-      font-size: 16px;
-      line-height: 24px;
-    }
+    // p {
+    //   font-weight: 600px;
+    //   font-size: 16px;
+    //   line-height: 24px;
+    // }
   }
 
   .user {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    margin: 2rem 1rem;
     padding: 2rem;
     flex-direction: column;
-    border-bottom: 1px solid #dfe3e8;
-    .username {
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px rgba(63, 63, 68, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);
+    p{
+      font-weight: 400px;
+      line-height: 20px;
       font-size: 18px;
-      font-weight: 700;
-      margin-top: 10px;
-      margin-bottom: 6px;
-      word-break: break-all;
+      margin-bottom: 2rem;
+    }
+    .userContent{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      .username {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        word-break: break-all;
+        margin-bottom: 0;
+        margin-left: 1rem;
+      }
+      .userImage {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+      }
     }
   }
-}
-.plan {
-  display: flex;
-  justify-content: flex-start;
-  border-bottom: 1px solid #c1c8d7;
-  padding: 20px 30px;
 
-  &__wrapper {
-    background: #fbfbfc;
-    &:last-child {
-      border-bottom: 0;
-    }
-  }
-
-  &Indent {
-    @media (max-width: 1485px) and (min-width: 1240px) {
-      flex: 1;
-    }
-    @media (max-width: 1240px) {
-      flex: 0.5;
-    }
-    flex: 2;
-    height: 100%;
-  }
-
-  &Cnt {
-    flex: 8;
+  .tags{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    padding: 2rem;
+    margin: 2rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px rgba(63, 63, 68, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);
+    p{
+      font-weight: 400px;
+      line-height: 20px;
+      font-size: 18px;
+      margin-bottom: 2rem;
+    }
+    .tagscontent{
+
+    }
   }
 
-  &Header {
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 20px;
-  }
-
-  &Sessions {
-    font-size: 14px;
-    font-weight: 400;
-    color: #949fb7;
-    line-height: 20px;
-  }
-
-  &LeftIndent {
-    padding-left: 2rem;
-  }
-}
-
-.date {
-  display: flex;
-  justify-content: flex-start;
-  padding: 20px 0 20px 30px;
-  border-bottom: 1px solid #c1c8d7;
-
-  &Cnt {
-    flex: 8;
+  .emergContact{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    padding: 2rem;
+    margin: 2rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px rgba(63, 63, 68, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);
+    .emergContactHeader{
+      margin-bottom: 2rem;
+      font-size: 18px;
+      line-height: 20px;
+    }
+    .emergContactContent{
+      display: flex;
+      flex-direction: column;
+      p{
+        margin-bottom: 1rem;
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
   }
 
-  &Header {
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 20px;
-  }
-
-  &HeaderCnt {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &HeaderLink {
-    font-size: 14px;
-    font-weight: 400;
-    color: #949fb7;
-    line-height: 20px;
-    text-decoration: underline;
-    margin-right: 15px;
-  }
-
-  &Line {
-    font-size: 14px;
-    font-weight: 400;
-    color: #949fb7;
-    line-height: 20px;
-  }
-
-  &Underline {
-    text-decoration: underline;
+  .reportButton{
+    margin: 2rem 1rem;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px rgba(63, 63, 68, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);
   }
 }
-.modalTitle {
-  font-size: 16px;
-  font-weight: 600;
-  color: #212b36;
-}
+// .plan {
+//   display: flex;
+//   justify-content: flex-start;
+//   border-bottom: 1px solid #c1c8d7;
+//   padding: 20px 30px;
+
+//   &__wrapper {
+//     background: #fbfbfc;
+//     &:last-child {
+//       border-bottom: 0;
+//     }
+//   }
+
+//   &Indent {
+//     @media (max-width: 1485px) and (min-width: 1240px) {
+//       flex: 1;
+//     }
+//     @media (max-width: 1240px) {
+//       flex: 0.5;
+//     }
+//     flex: 2;
+//     height: 100%;
+//   }
+
+//   &Cnt {
+//     flex: 8;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//   }
+
+//   &Header {
+//     font-size: 14px;
+//     font-weight: 600;
+//     line-height: 20px;
+//   }
+
+//   &Sessions {
+//     font-size: 14px;
+//     font-weight: 400;
+//     color: #949fb7;
+//     line-height: 20px;
+//   }
+
+//   &LeftIndent {
+//     padding-left: 2rem;
+//   }
+// }
+
+// .date {
+//   display: flex;
+//   justify-content: flex-start;
+//   padding: 20px 0 20px 30px;
+//   border-bottom: 1px solid #c1c8d7;
+
+//   &Cnt {
+//     flex: 8;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//   }
+
+//   &Header {
+//     font-size: 14px;
+//     font-weight: 600;
+//     line-height: 20px;
+//   }
+
+//   &HeaderCnt {
+//     display: flex;
+//     justify-content: space-between;
+//   }
+
+//   &HeaderLink {
+//     font-size: 14px;
+//     font-weight: 400;
+//     color: #949fb7;
+//     line-height: 20px;
+//     text-decoration: underline;
+//     margin-right: 15px;
+//   }
+
+//   &Line {
+//     font-size: 14px;
+//     font-weight: 400;
+//     color: #949fb7;
+//     line-height: 20px;
+//   }
+
+//   &Underline {
+//     text-decoration: underline;
+//   }
+// }
+// .modalTitle {
+//   font-size: 16px;
+//   font-weight: 600;
+//   color: #212b36;
+// }
 
 .infoWrapper {
   position: relative;
 }
 
-.userImage {
-  width: 133px;
-  height: 133px;
-  border-radius: 50%;
-}
+
 
 .userError {
   color: red;

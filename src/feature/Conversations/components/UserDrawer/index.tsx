@@ -72,7 +72,7 @@ export const UserDrawer = (): JSX.Element => {
         </button>
       </div>
       <div>
-        <div className={`${styles.user} ${styles.user__position}`}>
+        <div className={classNames(styles.user, styles.user__position)}>
           <p>Client ID</p>
           <div className={styles.user__content}>
             <div

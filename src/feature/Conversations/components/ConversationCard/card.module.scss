@@ -15,9 +15,10 @@
     background-color: #f4f6f8;
   }
   .headerInfo{
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     &__plan{
-      float: left;
       margin-left: 50px;
       &_active{
         p{

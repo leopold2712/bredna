@@ -47,9 +47,11 @@ export const ConversationCard: React.FC<Props> = ({ room, source }: Props): JSX.
 
   return (
     <button
-      className={` ${styles.dialogElem} ${styles.dialogElem__position} ${
-        active && !chatUI.mobileView ? styles.active : ''
-      }`}
+      className={classNames(
+        styles.dialogElem,
+        styles.dialogElem__position,
+        active && !chatUI.mobileView ? styles.active : '',
+      )}
       onClick={updateActiveRoom}
       type="button"
       key={id}
@@ -57,9 +59,10 @@ export const ConversationCard: React.FC<Props> = ({ room, source }: Props): JSX.
     >
       <div className={styles.headerInfo}>
         <div
-          className={`${styles.headerInfo__plan} ${
-            isPaid ? styles.headerInfo__plan_active : styles.headerInfo__plan_expired
-          }`}
+          className={classNames(
+            styles.headerInfo__plan,
+            isPaid ? styles.headerInfo__plan_active : styles.headerInfo__plan_expired,
+          )}
         >
           <p>{isPaid ? 'Active Paid Plan' : 'Expired Plans'}</p>
         </div>

@@ -1,10 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Icon } from '@shopify/polaris';
+import { Icon, TextField, Button } from '@shopify/polaris';
 import { MobileCancelMajor, MobileVerticalDotsMajor } from '@shopify/polaris-icons';
-import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
-import moment from 'moment';
-
 import HeyToast from '../../../../shared/components/HeyToast';
 import { useAppDispatch, useAppSelector } from '../../../../main/store/hooks';
 import { selectActiveRoom, selectClientInfo } from '../../store/selectors';
@@ -25,6 +22,7 @@ export const UserDrawer = (): JSX.Element => {
 
   const [loading, setLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
+  const [tagInputValue, setTagInputValue] = useState('');
 
   const activeRoom = useAppSelector(selectActiveRoom);
   const client = useAppSelector(selectClientInfo);
@@ -62,98 +60,67 @@ export const UserDrawer = (): JSX.Element => {
 
   const plans = client && client.current_plans ? client.current_plans : [];
 
+  const handleTagInputChange = (newTagInputValue: string) => setTagInputValue(newTagInputValue);
+
   const toggleOpen = () => setIsOpen((prev) => !prev);
   useOutsideListener(wrapper, toggleOpen);
   return isOpen ? (
-    <div className={classNames(styles.card, 'fs-unmask')} ref={wrapper}>
-      <div className={styles.header}>
-        <p className={styles.modalTitle}>More info</p>
-        <button className={styles.action} type="button" onClick={toggleOpen}>
+    <div className={classNames(styles.card__position, styles.card, 'fs-unmask')} ref={wrapper}>
+      <div className={styles.action_icon__wrapper}>
+        <button className={styles.action_icon} type="button" onClick={toggleOpen}>
           <Icon source={MobileCancelMajor} />
         </button>
       </div>
-      <div className={styles.infoWrapper}>
-        <div className={styles.user}>
-          <div
-            style={{
-              background: `url(${activeRoom?.thumbnail || user})`,
-              backgroundPosition: 'center',
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
-            }}
-            className={classNames(styles.userImage, 'fs-exclude')}
-          />
-          <p className={classNames(styles.username, 'fs-mask')}>
-            {client?.name || activeRoom?.name}
-          </p>
+      <div>
+        <div className={classNames(styles.user, styles.user__position)}>
+          <p>Client ID</p>
+          <div className={styles.user__content}>
+            <div
+              style={{
+                background: `url(${activeRoom?.thumbnail || user})`,
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+              }}
+              className={classNames(styles.user__image, 'fs-exclude')}
+            />
+            <p className={classNames(styles.user__name, 'fs-mask')}>
+              {client?.name || activeRoom?.name}
+            </p>
+          </div>
         </div>
-        <div className={styles.plans}>
-          {plans.length > 0 ? (
-            plans.map((plan) => (
-              <div className={styles.plan__wrapper} key={uuidv4()}>
-                <div className={styles.plan}>
-                  <div className={styles.planCnt}>
-                    <div className={styles.planHeader}>Plan type</div>
-                    <div className={styles.planSessions}>
-                      {`${plan.product.name} ${
-                        plan.total_credits ? `${plan.total_credits} sessions` : ''
-                      }`}
-                    </div>
-                    <ul className={`${styles.planSessions} ${styles.planLeftIndent}`}>
-                      <li>{`${getValidityTypeName(plan.product.validity_type)} billed`}</li>
-                      <li>{`Valid until ${moment(plan.expires_at).format('YYYY-MM-DD')}`}</li>
-                      <li>{`${plan.used_credits} sessions used`}</li>
-                      {plan.total_credits && (
-                        <li>{`${plan.total_credits - plan.used_credits} sessions left`}</li>
-                      )}
-                    </ul>
-                  </div>
-                </div>
-
-                <div className={styles.date}>
-                  <div className={styles.dateCnt}>
-                    <div className={styles.dateHeader}>Last interaction date</div>
-                    <div className={styles.dateLine}>
-                      {plan.last_interaction_made_at
-                        ? moment(plan.last_interaction_made_at).format('YYYY-MM-DD')
-                        : 'Not specified'}
-                    </div>
-                  </div>
-                </div>
-
-                <div className={styles.date}>
-                  <div className={styles.dateCnt}>
-                    <div className={styles.dateHeaderCnt}>
-                      <div className={styles.dateHeader}>Next interaction date</div>
-                      {/* @future feature
-                       {plan.next_interaction_expected_at && (
-                      <div className={styles.dateHeaderLink}>Link</div>
-                    )} */}
-                    </div>
-                    <div className={styles.dateLine}>
-                      {plan.next_interaction_expected_at
-                        ? moment(plan.next_interaction_expected_at).format('YYYY-MM-DD')
-                        : 'Not specified'}
-                    </div>
-                    {/* @future feature 
-                    {plan.next_interaction_expected_at && (
-                    <div className={`${styles.dateLine} ${styles.dateUnderline}`}>
-                      Send reminder to schedule
-                    </div>
-                  )} */}
-                  </div>
-                </div>
-              </div>
-            ))
-          ) : (
-            <p className={styles.userError}>Invalid client ID</p>
-          )}
+        <div className={styles.tags}>
+          <p>Tags</p>
+          <div>
+            <TextField
+              label="tags"
+              labelHidden
+              onChange={handleTagInputChange}
+              value={tagInputValue}
+              connectedRight={<Button disabled>add</Button>}
+            />
+          </div>
+        </div>
+        <div className={styles.emergContact}>
+          <p className={styles.emergContact__header}>Energancy contact</p>
+          <div className={styles.emergContact__content}>
+            <p>Dan Hamphry</p>
+            <p>+972 5473884293</p>
+          </div>
+        </div>
+        <div className={styles.reportButton}>
+          <Button fullWidth>Report</Button>
         </div>
         {loading && <UserDrawerLoading />}
       </div>
     </div>
   ) : (
-    <button type="button" onClick={toggleOpen} className={styles.action} disabled={!activeRoom}>
+    <button
+      type="button"
+      onClick={toggleOpen}
+      className={styles.action_icon}
+      disabled={!activeRoom}
+    >
       <Icon source={MobileVerticalDotsMajor} />
     </button>
   );

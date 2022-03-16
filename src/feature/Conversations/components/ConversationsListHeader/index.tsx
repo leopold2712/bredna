@@ -1,52 +1,55 @@
 import React, { useState } from 'react';
-import { Popover, Icon } from '@shopify/polaris';
-import { SortMinor } from '@shopify/polaris-icons';
-import { useAppDispatch, useAppSelector } from '../../../../main/store/hooks';
-import { setRooms } from '../../store';
-import { selectChatRooms } from '../../store/selectors';
+import { Icon, TextField, ActionList, Popover } from '@shopify/polaris';
+import { SearchMinor, FilterMajor } from '@shopify/polaris-icons';
 
 import './header.overload.scss';
 
 export const ConversationsListHeader = (): JSX.Element => {
-  const rooms = useAppSelector(selectChatRooms);
-  const [popoverOpen, setPopoverOpen] = useState(false);
-  const dispatch = useAppDispatch();
+  const [inputValue, setInputValue] = useState('');
+  const [isPopoverActive, setPopoverActive] = useState(false);
 
-  const closePopover = () => setPopoverOpen(false);
-  const openPopover = () => setPopoverOpen(true);
+  const togglePopoverActive = () => setPopoverActive((isPopoverActive) => !isPopoverActive);
+  const updateText = (value: string) => setInputValue(value);
 
-  const sortByClientName = () => {
-    // dispatch(
-    //   setRooms({
-    //     all: sortRoomsByClientName(rooms.all),
-    //     filtered: sortRoomsByClientName(rooms.filtered),
-    //   }),
-    // );
-    setPopoverOpen(false);
-  };
+  const activator = (
+    <button className="activator" type="button" onClick={togglePopoverActive}>
+      <Icon source={FilterMajor} />
+    </button>
+  );
 
   return (
     <div className="listSearch__wrapper">
-      <Popover
-        activator={
-          <button type="button" className="listSearch__sort" onClick={openPopover}>
-            <Icon source={SortMinor} />
-          </button>
-        }
-        active={popoverOpen}
-        onClose={closePopover}
-        preferredAlignment="right"
-      >
-        <div className="list-actions__wrapper">
-          {/* <button type="button" className="" onClick={sortByHubName}>
-            Urgent flag
-          </button> */}
-
-          <button type="button" className="" onClick={sortByClientName}>
-            Most recent date
-          </button>
-        </div>
-      </Popover>
+      <div className="listSearch__search">
+        <TextField
+          label="searchbar"
+          type="search"
+          labelHidden
+          value={inputValue}
+          onChange={updateText}
+          placeholder="Search by name"
+          prefix={<Icon source={SearchMinor} color="base" />}
+        />
+      </div>
+      <div className="listSearch__burger">
+        <Popover
+          activator={activator}
+          active={isPopoverActive}
+          onClose={togglePopoverActive}
+          preferredAlignment="left"
+        >
+          <div className="sortList">
+            <ActionList
+              actionRole="menuitem"
+              items={[
+                { content: 'All' },
+                { content: 'Active plan' },
+                { content: 'Active plan paid' },
+                { content: 'Expired plan' },
+              ]}
+            />
+          </div>
+        </Popover>
+      </div>
     </div>
   );
 };

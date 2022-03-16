@@ -2,7 +2,6 @@ import React from 'react';
 import { Avatar } from '@shopify/polaris';
 import moment from 'moment';
 import classNames from 'classnames';
-
 import { ChatService } from '../../services';
 import { useAppDispatch, useAppSelector } from '../../../../main/store/hooks';
 import { selectActiveRoom, selectChatUI, isCurrentPlansSelector } from '../../store/selectors';
@@ -47,11 +46,9 @@ export const ConversationCard: React.FC<Props> = ({ room, source }: Props): JSX.
 
   return (
     <button
-      className={classNames(
-        styles.dialogElem,
-        styles.dialogElem__position,
-        active && !chatUI.mobileView ? styles.active : '',
-      )}
+      className={classNames(styles.dialogElem, styles.dialogElem__position, {
+        [styles.active]: active && !chatUI.mobileView,
+      })}
       onClick={updateActiveRoom}
       type="button"
       key={id}
@@ -59,10 +56,9 @@ export const ConversationCard: React.FC<Props> = ({ room, source }: Props): JSX.
     >
       <div className={styles.headerInfo}>
         <div
-          className={classNames(
-            styles.headerInfo__plan,
-            isPaid ? styles.headerInfo__plan_active : styles.headerInfo__plan_expired,
-          )}
+          className={classNames(styles.headerInfo__plan, {
+            [styles.headerInfo__plan_active]: isPaid,
+          })}
         >
           <p>{isPaid ? 'Active Paid Plan' : 'Expired Plans'}</p>
         </div>

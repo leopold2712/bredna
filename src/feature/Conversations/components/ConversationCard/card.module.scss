@@ -20,20 +20,18 @@
     width: 100%;
     &__plan{
       margin-left: 50px;
+      p{
+        text-align: center;
+        color: #D82C0D;
+        font-weight: 500;
+      }
       &_active{
         p{
           text-align: center;
           color: #2EBA7F;
           font-weight: 500;
         }
-      }
-      &_expired{
-        p{
-          text-align: center;
-          color: #D82C0D;
-          font-weight: 500;
-        }
-      }
+       }
     }
     &__date {
       color: #949fb7;

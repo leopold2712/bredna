@@ -1,28 +1,21 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import { Icon, TextField, ActionList, Popover } from '@shopify/polaris';
 import { SearchMinor, FilterMajor } from '@shopify/polaris-icons';
 
 import './header.overload.scss';
 
 export const ConversationsListHeader = (): JSX.Element => {
-  // const rooms = useAppSelector(selectChatRooms);
+  const [inputValue, setInputValue] = useState('');
   const [isPopoverActive, setPopoverActive] = useState(false);
 
-  const togglePopoverActive = useCallback(() => {
-    setPopoverActive((isPopoverActive) => !isPopoverActive);
-  }, []);
+  const togglePopoverActive = () => setPopoverActive((isPopoverActive) => !isPopoverActive);
+  const updateText = (value: string) => setInputValue(value);
 
   const activator = (
     <button className="activator" type="button" onClick={togglePopoverActive}>
       <Icon source={FilterMajor} />
     </button>
   );
-
-  const [inputValue, setInputValue] = useState('');
-
-  const updateText = useCallback((value) => {
-    setInputValue(value);
-  }, []);
 
   return (
     <div className="listSearch__wrapper">

@@ -14,3 +14,5 @@ export const selectActiveMessage = (state: RootState): ChatMessageDTO | null =>
 export const selectClientInfo = (state: RootState): ClientDTO | null => state.chat.clientInfo;
 export const selectPersonalChatInfo = (state: RootState): ChatPersonalInfoDTO =>
   state.chat.userInfo;
+export const isCurrentPlansSelector = (state: RootState): boolean =>
+  Boolean(state.customers.currentCustomer?.client.current_plans);

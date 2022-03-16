@@ -1,20 +1,22 @@
-.wrapper {
+.dialogElem {
   background: #fff;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
   transition: background-color 450ms ease;
   cursor: pointer;
   border: none;
   outline: none;
   width: 100%;
   border-bottom: 1px solid #f4f6f8;
+  &__position{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
   &:hover {
     background-color: #f4f6f8;
   }
   .headerInfo{
     width: 100%;
-    .plan{
+    &__plan{
       float: left;
       margin-left: 50px;
       &_active{
@@ -32,19 +34,16 @@
         }
       }
     }
-    .date {
+    &__date {
       color: #949fb7;
       font-size: 12px;
       text-align: right;
     }
   }
-  .mainInfo{
+  .main_info{
     display: flex;
     width: 100%;
-    .avatar{
-
-    }
-    .content{
+    &__content{
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -53,30 +52,30 @@
       width: 100%;
       position: relative;
       margin-top: 1rem;
-      .name{
-        color: #212b36;
-        font-size: 14px;
-        font-weight: 400;
-        word-break: break-all;
-        text-align: start;
-      }
-      .message{
-        color: #949fb7;
-        font-weight: 300;
-        text-align: left;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-        max-width: 160px;
-      }
     }
-    .icons{
+    &__name{
+      color: #212b36;
+      font-size: 14px;
+      font-weight: 400;
+      word-break: break-all;
+      text-align: start;
+    }
+    &__message{
+      color: #949fb7;
+      font-weight: 300;
+      text-align: left;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 160px;
+    }
+    &__icons{
       position: absolute;
       top: 50%;
       right: 0;
       transform: translateY(-50%);
       display: flex;
-      .unread{
+      &_unread{
         width: 18px;
         height: 18px;
         background: #248AD3;

@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 import { ChatService } from '../../services';
 import { useAppDispatch, useAppSelector } from '../../../../main/store/hooks';
-import { selectActiveRoom, selectChatUI, selectClientInfo } from '../../store/selectors';
+import { selectActiveRoom, selectChatUI, isCurrentPlansSelector } from '../../store/selectors';
 import { setActiveRoom, setChatUI, Views } from '../../store';
 import { ChatRoomDTO } from '../../dtos';
 
@@ -16,9 +16,12 @@ type Props = {
   source: 'list' | 'header';
 };
 
+const unreadMessages = 3;
+
 export const ConversationCard: React.FC<Props> = ({ room, source }: Props): JSX.Element => {
   const activeRoom = useAppSelector(selectActiveRoom);
   const chatUI = useAppSelector(selectChatUI);
+  const isPaid = useAppSelector(isCurrentPlansSelector);
 
   const dispatch = useAppDispatch();
 
@@ -38,47 +41,48 @@ export const ConversationCard: React.FC<Props> = ({ room, source }: Props): JSX.
 
   const { id, thumbnail, name, lastMessage } = room;
 
-  const unreadMessages = 3;
-  const isPaid = Boolean(useAppSelector(selectClientInfo)?.current_plans);
-
   const initials = name[0] + name[name.indexOf(' ') + 1];
 
   const active = activeRoom?.id === id;
 
   return (
     <button
-      className={`${styles.wrapper} ${active && !chatUI.mobileView ? styles.active : ''}`}
+      className={` ${styles.dialogElem} ${styles.dialogElem__position} ${
+        active && !chatUI.mobileView ? styles.active : ''
+      }`}
       onClick={updateActiveRoom}
       type="button"
       key={id}
       id={id.toString()}
     >
       <div className={styles.headerInfo}>
-        {isPaid ? (
-          <div className={`${styles.plan} ${styles.plan_active}`}>
-            <p>Active Paid Plan</p>
-          </div>
-        ) : (
-          <div className={`${styles.plan} ${styles.plan_expired}`}>
-            <p>Expired Plans</p>
-          </div>
-        )}
+        <div
+          className={`${styles.headerInfo__plan} ${
+            isPaid ? styles.headerInfo__plan_active : styles.headerInfo__plan_expired
+          }`}
+        >
+          <p>{isPaid ? 'Active Paid Plan' : 'Expired Plans'}</p>
+        </div>
 
         {lastMessage && (
-          <div className={styles.date}>{moment(lastMessage?.createdAt).format('DD/MM/YYYY')}</div>
+          <div className={styles.headerInfo__date}>
+            {moment(lastMessage?.createdAt).format('DD/MM/YYYY')}
+          </div>
         )}
       </div>
 
-      <div className={styles.mainInfo}>
-        <div className={classNames(styles.avatar, 'fs-exclude')}>
+      <div className={styles.main_info}>
+        <div className={classNames('fs-exclude')}>
           {thumbnail ? <Avatar source={thumbnail} /> : <Avatar initials={initials} />}
         </div>
-        <div className={styles.content}>
-          <div className={styles.name}>{name}</div>
-          {lastMessage && <div className={styles.message}>{lastMessage.body}</div>}
+        <div className={styles.main_info__content}>
+          <div className={styles.main_info__name}>{name}</div>
+          {lastMessage && <div className={styles.mainInfo__message}>{lastMessage.body}</div>}
 
-          <div className={styles.icons}>
-            {unreadMessages > 0 && <div className={styles.unread}>{unreadMessages}</div>}
+          <div className={styles.main_info__icons}>
+            {unreadMessages > 0 && (
+              <div className={styles.main_info__icons_unread}>{unreadMessages}</div>
+            )}
           </div>
         </div>
       </div>
